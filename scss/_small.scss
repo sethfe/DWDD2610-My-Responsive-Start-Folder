@@ -21,7 +21,7 @@ html {
   }
 
   #headerWrapper {
-    background-color: #F4F1DE;
+    background-color: #FBF4D5;
     color: $primaryColor;
   }
   header {
@@ -37,7 +37,7 @@ html {
   }
 
   #navWrapper {
-    background-color: #81b29a;
+    background-color: #A1D9D1;
   }
 
   nav {
@@ -48,11 +48,11 @@ html {
       display: flex;
       li {flex:1;}
     }
-    li.active {background-color: #e07a5f;}
+    li.active {background-color: #FABEAF;}
     a {
       display: block;
       padding: 0.75rem;
-      color: #f4f1de;
+      color: #fff;
       text-align: center;
       text-decoration: none;
       &:hover {color: #3e405B;}

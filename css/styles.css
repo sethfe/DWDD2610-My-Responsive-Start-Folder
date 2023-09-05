@@ -329,12 +329,12 @@ body {
   height: 100%;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  color: #525252;
+  color: #727272;
 }
 
 #headerWrapper {
-  background-color: #F4F1DE;
-  color: #E07A5F;
+  background-color: #FBF4D5;
+  color: #131A1C;
 }
 
 header {
@@ -350,7 +350,7 @@ header h1 {
 }
 
 #navWrapper {
-  background-color: #81b29a;
+  background-color: #A1D9D1;
 }
 
 nav ul {
@@ -363,12 +363,12 @@ nav ul li {
   flex: 1;
 }
 nav li.active {
-  background-color: #e07a5f;
+  background-color: #FABEAF;
 }
 nav a {
   display: block;
   padding: 0.75rem;
-  color: #f4f1de;
+  color: #fff;
   text-align: center;
   text-decoration: none;
 }
