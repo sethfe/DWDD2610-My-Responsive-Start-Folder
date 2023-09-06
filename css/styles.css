@@ -333,7 +333,7 @@ body {
 }
 
 #headerWrapper {
-  background-color: #584053;
+  background-color: #4f5d75;
   color: #fff;
 }
 
@@ -350,7 +350,7 @@ header h1 {
 }
 
 #navWrapper {
-  background-color: #fcbc66;
+  background-color: #2d3142;
 }
 
 nav ul {
@@ -363,7 +363,7 @@ nav ul li {
   flex: 1;
 }
 nav li.active {
-  background-color: #8dc6bf;
+  background-color: #bfc0c0;
 }
 nav a {
   display: block;
@@ -373,11 +373,11 @@ nav a {
   text-decoration: none;
 }
 nav a:hover {
-  color: #584053;
+  color: #f97b4f;
 }
 
 #footerWrapper {
-  background-color: #584053;
+  background-color: #4f5d75;
 }
 
 footer {

@@ -21,7 +21,7 @@ html {
   }
 
   #headerWrapper {
-    background-color: #584053;
+    background-color: #4f5d75;
     color: $primaryColor;
   }
   header {
@@ -37,7 +37,7 @@ html {
   }
 
   #navWrapper {
-    background-color: #fcbc66;
+    background-color: #2d3142;
   }
 
   nav {
@@ -48,21 +48,21 @@ html {
       display: flex;
       li {flex:1;}
     }
-    li.active {background-color: #8dc6bf;}
+    li.active {background-color: #bfc0c0;}
     a {
       display: block;
       padding: 0.75rem;
       color: #fff;
       text-align: center;
       text-decoration: none;
-      &:hover {color: #584053;}
+      &:hover {color: #f97b4f;}
     }
   
   }
 
   // Footer starts here //
   #footerWrapper {
-    background-color: #584053;
+    background-color: #4f5d75;
   }
   footer {
     padding: 0.5rem $gutter;
