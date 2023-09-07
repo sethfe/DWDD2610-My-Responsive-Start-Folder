@@ -333,8 +333,8 @@ body {
 }
 
 #headerWrapper {
-  background-color: #4f5d75;
-  color: #fff;
+  background-color: #f7c59f;
+  color: #2a324b;
 }
 
 header {
@@ -350,7 +350,7 @@ header h1 {
 }
 
 #navWrapper {
-  background-color: #2d3142;
+  background-color: #c7ccdb;
 }
 
 nav ul {
@@ -363,21 +363,21 @@ nav ul li {
   flex: 1;
 }
 nav li.active {
-  background-color: #bfc0c0;
+  background-color: #767b91;
 }
 nav a {
   display: block;
   padding: 0.75rem;
-  color: #fff;
+  color: #000;
   text-align: center;
   text-decoration: none;
 }
 nav a:hover {
-  color: #f97b4f;
+  color: #fff;
 }
 
 #footerWrapper {
-  background-color: #4f5d75;
+  background-color: #f7c59f;
 }
 
 footer {
@@ -387,7 +387,7 @@ footer p {
   margin: 0;
   font-weight: 300;
   text-align: center;
-  color: #fff;
+  color: #2a324b;
 }
 
 @media only screen and (min-width: 35rem) {
