@@ -333,8 +333,8 @@ body {
 }
 
 #headerWrapper {
-  background-color: #f7c59f;
-  color: #2a324b;
+  background-color: #f4f1de;
+  color: #3e405b;
 }
 
 header {
@@ -350,7 +350,7 @@ header h1 {
 }
 
 #navWrapper {
-  background-color: #c7ccdb;
+  background-color: #e07a5f;
 }
 
 nav ul {
@@ -363,7 +363,7 @@ nav ul li {
   flex: 1;
 }
 nav li.active {
-  background-color: #767b91;
+  background-color: #a4a6c1;
 }
 nav a {
   display: block;
@@ -377,7 +377,7 @@ nav a:hover {
 }
 
 #footerWrapper {
-  background-color: #f7c59f;
+  background-color: #3e405b;
 }
 
 footer {
@@ -387,7 +387,7 @@ footer p {
   margin: 0;
   font-weight: 300;
   text-align: center;
-  color: #2a324b;
+  color: #f4f1de;
 }
 
 @media only screen and (min-width: 35rem) {
@@ -397,10 +397,25 @@ footer p {
   header h1 {
     font-size: 2rem;
   }
+  /* nav stuff goes here */
+  /*nav {
+
+     ul {
+      display: flex;
+     } // end of ul
+     ul li a {
+      border: none;
+     }
+  } // end ov nav */
 }
 @media only screen and (min-width: 60rem) {
   header, nav, main, footer {
     max-width: 60rem;
     margin: auto;
   }
+  /* nav stuff goes here */
+  /*nav ul li a {
+      padding: .6rem 2rem;
+      font-size: .8rem;
+  } // end nav ul li a */
 }

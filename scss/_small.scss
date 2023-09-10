@@ -21,7 +21,7 @@ html {
   }
 
   #headerWrapper {
-    background-color: #f7c59f;
+    background-color: #f4f1de;
     color: $primaryColor;
   }
   header {
@@ -37,7 +37,7 @@ html {
   }
 
   #navWrapper {
-    background-color: #c7ccdb;
+    background-color: #e07a5f;
   }
 
   nav {
@@ -48,7 +48,7 @@ html {
       display: flex;
       li {flex:1;}
     }
-    li.active {background-color: #767b91;}
+    li.active {background-color: lighten($primaryColor, 40%);}
     a {
       display: block;
       padding: 0.75rem;
@@ -62,7 +62,7 @@ html {
 
   // Footer starts here //
   #footerWrapper {
-    background-color: #f7c59f;
+    background-color: #3e405b;
   }
   footer {
     padding: 0.5rem $gutter;
@@ -70,7 +70,7 @@ html {
       margin: 0;
       font-weight: $lightWeight;
       text-align: center;
-      color: #2a324b;
+      color: #f4f1de;
     }
   }
 
