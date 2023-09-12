@@ -1,65 +1,70 @@
 /* Prevent adjustments of font size after orientation changes.  */
 html {
-    -moz-text-size-adjust: none;
-    -webkit-text-size-adjust: none;
-    text-size-adjust: none;
-    height: 100%;
-  }
-  
-  /*---- apply a natural box layout model to all elements -------*/
-  * {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-  }
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  height: 100%;
+}
 
-  body{
-    height: 100%;
-    font-family: $defaultFont;
+/*---- apply a natural box layout model to all elements -------*/
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  font-family: $defaultFont;
+  font-weight: $normalWeight;
+  color: $fontColor;
+}
+
+#headerWrapper {
+  background-color: #fffee9;
+  color: $primaryColor;
+}
+header {
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem $gutter;
+  gap: 8px;
+  h1 {
+    margin: 0;
+    font-size: 1.2rem;
     font-weight: $normalWeight;
-    color: $fontColor;
   }
+}
 
-  #headerWrapper {
-    background-color: #f4f1de;
-    color: $primaryColor;
-  }
-  header {
-    display: flex;
-    align-items: flex-end;
-    padding: 1rem $gutter;
-    gap: 8px;
-    h1 {
-        margin: 0;
-        font-size: 1.2rem;
-        font-weight: $normalWeight;
+#navWrapper {
+  background-color: #a8a8a8;
+}
+
+nav {
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: block;
+    li {
+      flex: 1;
     }
   }
-
-  #navWrapper {
-    background-color: #e07a5f;
+  li.active {
+    background-color: #ecb984;
+    border-radius: 5px;
   }
-
-  nav {
-    ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-      display: block;
-      li {flex:1;}
+  a {
+    display: block;
+    padding: 0.75rem;
+    color: #fffee9;
+    text-align: left;
+    text-decoration: none;
+    &:hover {
+      color: #963a2f;
     }
-    li.active {background-color: lighten($primaryColor, 40%);}
-    a {
-      display: block;
-      padding: 0.75rem;
-      color: #000;
-      text-align: left;
-      text-decoration: none;
-      &:hover {color: #fff;}
-    }
-  
   }
-
+}
 
 // main stuff
 section {
@@ -72,26 +77,20 @@ section div {
   padding: 1rem $gutter;
   img {
     width: 100%;
-    height: auto;}
+    height: auto;
+  }
 }
 
-
-
-
-
-
-  // Footer starts here //
-  #footerWrapper {
-    background-color: #3e405b;
+// Footer starts here //
+#footerWrapper {
+  background-color: #3e405b;
+}
+footer {
+  padding: 0.5rem $gutter;
+  p {
+    margin: 0;
+    font-weight: $lightWeight;
+    text-align: center;
+    color: #f4f1de;
   }
-  footer {
-    padding: 0.5rem $gutter;
-    p{
-      margin: 0;
-      font-weight: $lightWeight;
-      text-align: center;
-      color: #f4f1de;
-    }
-  }
-
-  
+}

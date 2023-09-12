@@ -333,8 +333,8 @@ body {
 }
 
 #headerWrapper {
-  background-color: #f4f1de;
-  color: #3e405b;
+  background-color: #fffee9;
+  color: #963a2f;
 }
 
 header {
@@ -350,7 +350,7 @@ header h1 {
 }
 
 #navWrapper {
-  background-color: #e07a5f;
+  background-color: #a8a8a8;
 }
 
 nav ul {
@@ -363,17 +363,18 @@ nav ul li {
   flex: 1;
 }
 nav li.active {
-  background-color: #a4a6c1;
+  background-color: #ecb984;
+  border-radius: 5px;
 }
 nav a {
   display: block;
   padding: 0.75rem;
-  color: #000;
+  color: #fffee9;
   text-align: left;
   text-decoration: none;
 }
 nav a:hover {
-  color: #fff;
+  color: #963a2f;
 }
 
 section {
@@ -417,6 +418,7 @@ footer p {
   }
   nav ul li a {
     border: none;
+    text-align: center;
   }
   section {
     grid-template-columns: 1fr 1fr;
@@ -424,7 +426,7 @@ footer p {
 }
 @media only screen and (min-width: 60rem) {
   header, nav, main, footer {
-    max-width: 60rem;
+    max-width: 75rem;
     margin: auto;
   }
   /* NAVIGATION STUFF GOES HERE  */
