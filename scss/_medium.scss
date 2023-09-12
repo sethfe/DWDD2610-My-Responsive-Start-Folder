@@ -5,13 +5,19 @@ header {
     }
 } // end of header
 
-/* nav stuff goes here */
-/*nav {
-   
-   ul {
-    display: flex;
-   } // end of ul
-   ul li a {
-    border: none;
-   }
-} // end ov nav */
+/* NAVIGATION STUFF GOES HERE  */
+nav {
+    ul {
+        display: flex;
+    } // end ul
+    ul li a {
+        border: none;
+    } 
+} // end nav 
+
+// main stuff
+section {
+    grid-template-columns: 1fr 1fr;
+  }
+
+

@@ -3,8 +3,12 @@ max-width: 60rem;
 margin: auto;
 } // end of header
 
-/* nav stuff goes here */
-/*nav ul li a {
+/* NAVIGATION STUFF GOES HERE  */
+nav ul li a {
     padding: .6rem 2rem;
-    font-size: .8rem;
-} // end nav ul li a */
+    font-size: .8rem; 
+} // end nav ul li a 
+
+section {
+    grid-template-columns: 1fr 1fr 1fr;
+  }

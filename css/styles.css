@@ -329,7 +329,7 @@ body {
   height: 100%;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  color: #727272;
+  color: #626262;
 }
 
 #headerWrapper {
@@ -357,7 +357,7 @@ nav ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  display: flex;
+  display: block;
 }
 nav ul li {
   flex: 1;
@@ -369,11 +369,25 @@ nav a {
   display: block;
   padding: 0.75rem;
   color: #000;
-  text-align: center;
+  text-align: left;
   text-decoration: none;
 }
 nav a:hover {
   color: #fff;
+}
+
+section {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+section div {
+  width: 100%;
+  padding: 1rem 16px;
+}
+section div img {
+  width: 100%;
+  height: auto;
 }
 
 #footerWrapper {
@@ -397,25 +411,28 @@ footer p {
   header h1 {
     font-size: 2rem;
   }
-  /* nav stuff goes here */
-  /*nav {
-
-     ul {
-      display: flex;
-     } // end of ul
-     ul li a {
-      border: none;
-     }
-  } // end ov nav */
+  /* NAVIGATION STUFF GOES HERE  */
+  nav ul {
+    display: flex;
+  }
+  nav ul li a {
+    border: none;
+  }
+  section {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 @media only screen and (min-width: 60rem) {
   header, nav, main, footer {
     max-width: 60rem;
     margin: auto;
   }
-  /* nav stuff goes here */
-  /*nav ul li a {
-      padding: .6rem 2rem;
-      font-size: .8rem;
-  } // end nav ul li a */
+  /* NAVIGATION STUFF GOES HERE  */
+  nav ul li a {
+    padding: 0.6rem 2rem;
+    font-size: 0.8rem;
+  }
+  section {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
