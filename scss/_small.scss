@@ -52,21 +52,29 @@ nav {
   }
   li.active {
     background-color: #ecb984;
-    border-radius: 5px;
   }
   a {
     display: block;
     padding: 0.75rem;
-    color: #fffee9;
+    color: #000;
     text-align: left;
     text-decoration: none;
     &:hover {
-      color: #963a2f;
+      color: #fffee9;
     }
   }
 }
 
 // main stuff
+h1 {
+  margin: 0;
+  padding: 1rem $gutter;
+}
+h2 {
+  text-align: center;
+  
+}
+ 
 section {
   display: grid;
   grid-template-columns: 1fr;
@@ -75,11 +83,20 @@ section {
 section div {
   width: 100%;
   padding: 1rem $gutter;
-  img {
-    width: 100%;
-    height: auto;
+  h2 {
+    text-align: center;
   }
+  img {
+    border-radius: 15px;
+    width: 100%;
+  }
+
+  p {
+    text-align:center;
+  }
+  
 }
+  
 
 // Footer starts here //
 #footerWrapper {
