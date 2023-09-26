@@ -1,0 +1,22 @@
+header {
+    padding: 2rem $gutter;
+    h1{
+        font-size: 2rem;
+    }
+}
+
+// nav start here
+nav {
+    ul {
+        display:flex;
+        justify-content: space-around;
+    }
+    ul li a {
+        border: none;
+    }
+    ul li.active a {
+        background: none;
+        color: $primaryColor;
+        text-decoration: underline 3px $secondaryColor;
+    }
+}
