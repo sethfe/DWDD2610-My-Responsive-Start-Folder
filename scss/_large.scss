@@ -3,12 +3,32 @@ header, nav, main, footer {
     margin: auto;
 }
 
-// nav stuff starts here
-nav ul li a {
-    padding: .6rem 2rem;
-    font-size: 1rem;
+/* Navigation Start */
+
+
+
+nav {
+    button{display: none;}
+    ul, ul.open {
+        margin-left: 1vw;
+        border: none;
+        display: flex;
+        justify-content: right;
+        background-color: lighten($primaryColor, 20%);
+    } // end ul
+    ul li {
+        border-radius: 1px;
+    }
+} // end nav
+
+.allcards {
+   
+    section {
+        flex-basis: calc(33.3333% - (($gutter*2)/3));
+    }
 }
 
-nav ul {
-    justify-content: right;
+footer div {
+    display: grid;
+    grid-template-columns: auto auto auto;
 }

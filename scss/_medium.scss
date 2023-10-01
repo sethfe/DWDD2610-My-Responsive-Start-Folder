@@ -5,19 +5,17 @@ header {
     }
 }
 
-// nav start here
-nav {
-    ul {
-        display:flex;
-        justify-content: space-around;
-    }
-    ul li a {
-        border: none;
-    }
-    ul li.active a {
-        background: none;
-        color: $primaryColor;
-        text-decoration: underline 3px $secondaryColor;
+.allcards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $gutter;
+    section {
+        flex-basis: calc(50% - ($gutter/2));
     }
 }
 
+footer div {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+}

@@ -327,14 +327,14 @@ html {
 
 body {
   height: 100%;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 400;
-  color: #333333;
+  color: #222;
 }
 
 #headerWrapper {
   background-color: white;
-  color: #4169e1;
+  color: #d67db3;
 }
 
 header {
@@ -346,85 +346,142 @@ header {
 header h1 {
   margin: 0;
   font-size: 1.2rem;
-  font-weight: 500;
+  font-weight: 400;
 }
 
-#navWrapper {
-  background-color: #eef4ed;
+nav {
+  background-color: none;
 }
-
+nav button {
+  padding: 0.5rem;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  color: #000;
+}
 nav ul {
+  display: none;
   list-style-type: none;
   padding: 0;
   margin: 0;
+}
+nav ul.open {
   display: block;
 }
-nav li.active a {
-  background: none;
-  -webkit-text-decoration: underline 3px #ff6b35;
-          text-decoration: underline 3px #ff6b35;
-  color: #4169e1;
+nav li.active {
+  background-color: #74ccce;
 }
 nav a {
   display: block;
-  padding: 0.75rem;
-  color: #333333;
-  text-align: center;
+  font-weight: 400;
+  padding: 0.9rem 2vw;
+  color: #000;
+  text-align: left;
   text-decoration: none;
 }
 nav a:hover {
-  color: #4169e1;
-  -webkit-text-decoration: underline 3px #ff6b35;
-          text-decoration: underline 3px #ff6b35;
+  background-color: #83d2d4;
 }
 
-#mainWrapper {
-  height: 100%;
-  color: #333333;
+main h1 {
+  padding: 0.75rem 16px;
 }
 
-.hero img {
-  width: 100%;
-  height: auto;
-  padding-bottom: 16px;
+.allcards {
+  padding: 0 16px;
 }
-
-h1 {
+.allcards section {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+  background-color: #65c7c9;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+.allcards section h2, .allcards section p, .allcards section img {
   margin: 0;
   padding: 1rem 16px;
+}
+.allcards section h2 {
+  background-color: #d67db3;
+  font-size: 1.5rem;
   text-align: center;
-}
-
-h2 {
-  text-align: center;
-}
-
-video {
-  width: 90%;
-  margin-left: 5%;
-}
-
-details {
-  margin: 0.5rem 16px;
-}
-details summary {
-  background-color: #4169e1;
   color: white;
-  padding: 2px;
+}
+.allcards section img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.allcards section img.e2e {
+  padding: 0;
+}
+.allcards section p {
+  font-style: italic;
+}
+.allcards section a {
+  display: block;
+  background-color: #fff;
+  padding: 0.75rem;
+  text-align: center;
+  margin: 0 3rem 1rem 3rem;
+  border-radius: 8px;
+  color: black;
+  text-decoration: none;
+}
+.allcards section a:hover {
+  background-color: #e09cc5;
 }
 
 #footerWrapper {
-  background-color: #4169e1;
+  background-image: linear-gradient(to right, #b5e0d8, #c9a8d0);
 }
 
 footer {
   padding: 0.5rem 16px;
 }
-footer p {
+footer section.contact {
+  display: block;
+  justify-content: left;
+}
+footer section.contact p {
+  font-size: 1.2rem;
+  margin: 0.5rem;
+}
+footer section.contact i {
+  color: #d67db3;
+  padding: 0 8px;
+}
+footer section.social {
+  display: flex;
+  justify-content: center;
+}
+footer section.social a {
+  background-color: #b1e2e3;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+  font-size: 2rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  color: #222;
+}
+footer section.social a:hover {
+  background-color: #eecbe0;
+}
+footer section.location {
+  display: flex;
+  justify-content: right;
+  font-size: 1.2rem;
+}
+footer section.location i {
+  color: #d67db3;
+  padding: 0 8px;
+}
+footer p.legal {
   margin: 0;
   font-weight: 300;
   text-align: center;
-  color: white;
+  color: #000;
 }
 
 @media only screen and (min-width: 35rem) {
@@ -434,18 +491,18 @@ footer p {
   header h1 {
     font-size: 2rem;
   }
-  nav ul {
+  .allcards {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 16px;
   }
-  nav ul li a {
-    border: none;
+  .allcards section {
+    flex-basis: calc(50% - 8px);
   }
-  nav ul li.active a {
-    background: none;
-    color: #4169e1;
-    -webkit-text-decoration: underline 3px #ff6b35;
-            text-decoration: underline 3px #ff6b35;
+  footer div {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
   }
 }
 @media only screen and (min-width: 60rem) {
@@ -453,11 +510,25 @@ footer p {
     max-width: 75rem;
     margin: auto;
   }
-  nav ul li a {
-    padding: 0.6rem 2rem;
-    font-size: 1rem;
+  /* Navigation Start */
+  nav button {
+    display: none;
   }
-  nav ul {
+  nav ul, nav ul.open {
+    margin-left: 1vw;
+    border: none;
+    display: flex;
     justify-content: right;
+    background-color: #b1e2e3;
+  }
+  nav ul li {
+    border-radius: 1px;
+  }
+  .allcards section {
+    flex-basis: calc(33.3333% - 10.6666666667px);
+  }
+  footer div {
+    display: grid;
+    grid-template-columns: auto auto auto;
   }
 }

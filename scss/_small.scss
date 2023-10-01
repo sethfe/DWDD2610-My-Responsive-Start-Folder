@@ -11,7 +11,6 @@ html {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
   }
-  
 
   body {
     height: 100%;
@@ -22,7 +21,7 @@ html {
 
   #headerWrapper {
     background-color: white;
-    color: $primaryColor;
+    color: $secondaryColor;
   }
 
   header {
@@ -33,91 +32,155 @@ html {
     h1 {
         margin: 0;
         font-size: 1.2rem;
-        font-weight: $mediumWeight;
+        font-weight: $normalWeight;
     }
   }
 
-  #navWrapper {
-    background-color: #eef4ed;
-  }
+  //#navWrapper {}
+   
+  
 
   nav {
-    ul {
+    background-color: none;
+    button {
+      padding: .5rem;
+      background: transparent;
+      border: none;
+      font-size: 2rem;
+      color: #000;
+    }//end button
+    ul  {
+        display: none;
         list-style-type: none;
         padding: 0;
         margin: 0;
-        display: block;
-        
     }
-    li.active a  {
-       background: none;
-       text-decoration: underline 3px $secondaryColor;
-       color: $primaryColor;
+    ul.open {
+      display: block;
+    }
+    li.active {
+      background-color: lighten($primaryColor, 4%);
+      
     }
     a {
         display: block;
-        padding: 0.75rem;
-        color: $fontColor;
-        text-align: center;
+        font-weight: $normalWeight;
+        padding: 0.9rem 2vw;
+        color: #000;
+        text-align: left;
         text-decoration: none;
         &:hover {
-          color: $primaryColor;
-          text-decoration: underline 3px $secondaryColor;
+          background-color: lighten($primaryColor, 8%);
         }
+    }
+  } // end nav
+
+
+  main {
+    h1{
+      padding: .75rem $gutter;
     }
   }
 
-  
+  .allcards {
+    padding: 0 $gutter;
 
+    section {
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.2);
+      background-color: $primaryColor;
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 1rem 0;
+      h2, p, img {
+        margin: 0;
+        padding: 1rem $gutter;
+      }
 
-
-//main stuff
- #mainWrapper  {
-  height: 100%;
-  color: $fontColor;
- }
-
- .hero img {
-  width: 100%;
-  height: auto;
-  padding-bottom: 16px;
- }
-
-h1 {
-  margin: 0;
-  padding: 1rem $gutter;
-  text-align: center;
-}
-h2 {
-  text-align: center; 
-
-} 
-
-video {
-  width: 90%;
-  margin-left: 5%;
-}
-
-details {
-  margin: .5rem $gutter;
-  summary {
-    background-color: $primaryColor;
-    color: white;
-    padding: 2px;
-  }
-}
+      h2 {
+        background-color: $secondaryColor;
+        font-size: 1.5rem;
+        text-align: center;
+        color: white;
+      }
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      img.e2e {
+        padding: 0;
+      }
+      p {
+        font-style: italic;
+      }
+      a {
+        display: block;
+        background-color: #fff;
+        padding: .75rem;
+        text-align: center;
+        margin: 0 3rem 1rem 3rem;
+        border-radius: 8px;
+        color: black;
+        text-decoration: none;
+        &:hover {background-color: lighten($secondaryColor, 8%)};
+      }
+    }
+  } //end allcards
 
 // footer begins here
 #footerWrapper {
-    background-color: $primaryColor;
+  background-image: linear-gradient(to right, #b5e0d8 , #c9a8d0);
+   
 }
 footer {
     padding: 0.5rem $gutter;
+    
+    //section {}
 
-    p {
+   
+    section.contact {
+      display: block;
+      justify-content: left;
+      p{font-size: 1.2rem; margin: .5rem;}
+      i {
+        color: $secondaryColor;
+        padding: 0 8px;
+      }
+    //{color:blue; padding-right: 8px}
+    } // end of contact
+
+    section.social {
+      display: flex;
+      justify-content: center;
+      a {
+        background-color: lighten($primaryColor, 20%);
+        display: block;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.2);
+        font-size: 2rem;
+        margin: .5rem;
+        padding: .5rem;
+        color: #222;
+        &:hover {
+          background-color: lighten($secondaryColor, 20%);
+        }
+      }
+    } // end of social
+
+    section.location {
+      display: flex;
+      justify-content: right;
+      font-size: 1.2rem;
+      i {
+        color: $secondaryColor;
+        padding: 0 8px;
+      }
+    }// end of location
+
+    p.legal {
         margin: 0;
         font-weight: $lightWeight;
         text-align: center;
-        color: white;
+        color: #000;
     }
 }
