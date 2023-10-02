@@ -350,7 +350,7 @@ header h1 {
 }
 
 nav {
-  background-color: none;
+  background: none;
 }
 nav button {
   padding: 0.5rem;
