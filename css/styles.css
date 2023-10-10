@@ -367,11 +367,11 @@ header section {
   margin: auto;
 }
 header section.contact {
-  display: block;
-  justify-content: left;
+  display: flex;
+  justify-content: center;
 }
 header section.contact p {
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   margin: 0.5rem;
 }
 header section.contact i {
@@ -384,13 +384,17 @@ header section.contact a {
 }
 header section.social {
   display: flex;
-  justify-content: right;
+  justify-content: center;
 }
 header section.social a {
-  display: block;
-  font-size: 1.5rem;
-  margin: 0.5rem;
+  padding: 0;
+  font-size: 1rem;
+  margin: 0.4rem;
   color: #ffffee;
+}
+header section.social i {
+  color: #ffffee;
+  padding-right: 5px;
 }
 
 #navWrapper {
