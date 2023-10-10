@@ -7,7 +7,7 @@ export const reviews = [
     {
         "name": "Gerald Johanssen",
         "stars": 5,
-        "text": "Aboslutely amazing, these cars have such great quality, and i dont have to break teh bank. I would recommend this brand to anyone. Customer Service was extrordinary, felt like what i said mattered and i wasnt pushed into buying!"
+        "text": "Aboslutely amazing, these cars have such great quality, and i dont have to break the bank. I would recommend this brand to anyone. Customer Service was extrordinary, felt like what i said mattered and i wasnt pushed into buying!"
     },
     {
         "name": "Arnold Shortman",

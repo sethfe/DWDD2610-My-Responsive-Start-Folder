@@ -47,6 +47,21 @@ nav {
     }
 }
 
+#cards {
+    padding: 0 $gutter;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(500px,1fr));
+   gap: $gutter;
+    text-align: center;
+    color: $secondaryColor;
+    h3 {
+      margin: 2rem $gutter 0 $gutter;
+      text-align: center;
+      color: $secondaryColor;
+      font-weight: $boldWeight;
+    }
+  }
+
 footer div {
     display: grid;
     grid-template-columns: auto auto;
