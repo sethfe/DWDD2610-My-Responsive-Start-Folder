@@ -521,7 +521,8 @@ main h2 {
   margin: auto;
 }
 .allcards p {
-  text-align: center;
+  text-align: left;
+  justify-content: center;
 }
 .allcards a {
   display: block;
