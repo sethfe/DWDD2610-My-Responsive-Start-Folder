@@ -1,6 +1,7 @@
 import { reviews} from "../data/reviews.js";
 console.log(reviews);
 
+
 // create empty card
 const myTarget = document.querySelector("#cards");
 
@@ -19,7 +20,7 @@ for (let x = 0; x < reviews.length; x++) {
 
 
     for (let step = 0; step<reviews[x].stars; step++) {
-        const reviewIndicator = document.createElement('img', img.alt = "crown icon")
+        const reviewIndicator = document.createElement('img')
         reviewIndicator.src = "../images/crown-solid.svg" 
         myRating.appendChild(reviewIndicator)
     }
@@ -47,3 +48,6 @@ x.onclick = toggleMenu;
 // inject current year in footer
 const rightNow = new Date();
 document.querySelector('#year').textContent = rightNow.getFullYear(); //end
+
+
+var img = document.getElementById("myImg").alt 
