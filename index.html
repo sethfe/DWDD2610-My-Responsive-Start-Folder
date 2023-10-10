@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Start Folder | The Front End Web Developer</title>
+    <title>Auto Dealer | Majestic Motors</title>
     <meta name="description" content="Sample start file">
     <meta name="author" content="Seth Elliott">
 
@@ -10,7 +10,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Noto+Serif+Display:wght@300;400;500;600;700display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/9f3880ef33.js" crossorigin="anonymous"></script>
     <link href="css/styles.min.css" rel="stylesheet">
 
@@ -25,18 +25,18 @@
 
     <div id="headerWrapper">
         <header>
-            <img src="images/logo1x.png" alt="logo" width="300" height="146">
+           <a href="#"><img src="images/logo1x.png" alt="logo" width="223" height="150" srcset="images/logo1x.png 1x, images/logo2x.png 2x, images/logo3x.png 3x" class="center"></a>
         </header>
     </div>
 
     <div id="navWrapper">
         <nav>
-            <button id="hamburgerMenu">&#9776;</button>
+            <button id="hamburgerMenu"><span>&#9776;</span><span>x</span></button>
             <ul id="primaryNav">
-                <li class="active"> <a href="#">Menu</a></li>
-                <li><a href="#">Locations</a></li>
-                <li><a href="#">Catering</a></li>
-                <li><a href="#">Our Story</a></li>
+                <li> <a href="#">Home</a></li>
+                <li class="active"><a href="#">Inventory</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Financing</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
@@ -44,86 +44,61 @@
 
     <div id="mainWrapper">
         <main>
-            <h1>Burger Time has a variety of delicious menu options!</h1>
+           <div class="mainHero">
+            <source media="(max-width: 700px)" srcset="images/hero-small.webp">
+                <source media="(max-width: 1100px)" srcset="images/hero-medium.webp">
+                <img src="images/hero-image3.webp" alt="car in the rain" width="16" height="9">
+            <h1>Majestic Motors <br>Drive like Royalty</h2></h1>
+            
+           </div>
+           <h1>Inventory</h1>
+           <div class="allcards">
+            <section class="color">
+                <img src="images/noun-luxury-6142800.svg" alt="a icon with a diamond and two hands underneath it" class="shape">
+                <h2>Luxury</h2>
+                <p>Majestic Motors offers high end luxury vehicles and service! Luxury quality at a fraction of the cost! We believe everyone deserves to be treated like royalty!</p>
+                <a href="#">VIEW MORE</a>
+            </section>
 
-            <div class="allcards">
-                <section>
-                    <h2>Appetizers</h2>
-                    <img src="images/appetizers.webp" alt="Appetizers" width="300" height="175" class="e2e">
-                    <p>Start your meal off right, and grab any of our amazing Burger Time appitizers.</p>
-                    <a href="#">View Menu</a>
-                </section>
+            <section class="pulse">
+                <img src="images/car-solid.svg" alt="icon of a car forward facing">
+                <h2>Sedan</h2>
+                <p>View the Majestic Sedan lineup perfectly suited for anyone and everyone. Fuel effiencient to take on those long road trips or weekend getaways. </p>
+                <a href="#">VIEW MORE</a>
+            </section>
 
-                <section>
-                    <h2>Breakfast</h2>
-                    <img src="images/breakfast.webp" alt="Breakfast" width="300" height="175">
-                    <p>For those breakfast lovers, Burger Time's breakfast menu is available all day.</p>
-                    <a href="#">View Menu</a>
-                </section>
+            <section class="spin">
+                <img src="images/suv-icon.svg" alt="icon of a SUV">
+                <h2>SUV</h2>
+                <p>Welcome the all new Regal Expedition SUV line. You explore more with different all wheel drive settings. Go find your next adventure its out there!</p>
+                <a href="#">VIEW MORE</a>
+            </section>
 
-                <section>
-                    <img src="images/lunch.webp" alt="Lunch" width="300" height="175">
-                    <h2>Lunch</h2>
-                    <p>Go big or go home with one of our classic award winning burgers. We have the best burgers in town. It's Burger Time!</p>
-                    <a href="#">View Menu</a>
-                </section>
+            <section class="bounce">
+                <img src="images/electric-car.svg" alt="eletric plug with lightning bolt">
+                <h2>Electric</h2>
+                <p>New all electric vehicles coming soon. Say hello to a more sustainable cleaner energy efficient electric car, with all the same quality majestic features.</p>
+                <a href="#">LEARN MORE</a>
+            </section>
+           </div>
 
-                <section>
-                    <img src="images/dinner.webp" alt="Dinner" width="300" height="175" class="e2e">
-                    <h2>Dinner</h2>
-                    <p>Dine in for dinner that won't dissappoint. Burger Time has many classic diner options for dinner.</p>
-                    <a href="#">View Menu</a>
-                </section>
 
-                <section>
-                    <h2>Dessert</h2>
-                    <img src="images/dessert.webp" alt="Dessert" width="300" height="175" class="e2e">
-                    <p>Shake things up with one of our amazing malted milkshakes. We also have a variety of desserts fit for every sweet tooth.</p>
-                    <a href="#">View Menu</a>
-                </section>
-
-                <section>
-                    <img src="images/drinks.webp" alt="Drinks" width="300" height="175">
-                    <p>Cheers, it's five o'clock somewhere, check out our drink menu fit for brunch till dusk.</p>
-                    <a href="#">View Menu</a>
-                </section>
-            </div>
+           
+           <div class="reviewWrapper">
+            <h2>Read Our Customer Reviews</h2>
+            <div id="cards"></div> <!-- end cards -->
+           </div>
+           
         </main>
     </div>
 
-    <div>
-        <footer id="footerWrapper">
-            <div>
-                <section class="contact">
-                    <p><i class="fa-solid fa-user"></i>Seth Elliott</p>
-                    <p><i class="fa-solid fa-house"></i>Burger Time</p>
-                    <p><i class="fa-solid fa-paper-plane"></i>
-                        <a href="mailto:seth.elliott@gmail.com">burgertime@gmail.com</a></p>
-                    <p><i class="fa-solid fa-globe"></i>
-                        <a href="https://burger-time-diner.com">BurgerTimeDiner.com</a></p>
-                    <p><i class="fa-solid fa-phone"></i>
-                        <a href="tel:18013304554"> 1-702-330-4554</a></p>
-                </section>
-                <section class="social">
-                    <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
-                    <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-square-reddit"></i></a>
-                    <a href="#"><i class="fa-brands fa-square-youtube"></i></a>
-
-                </section>
-                <section class="location">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <address>Burger Time Diner<br> 123 East 317 West<br>New York, New York 11201</address>
-                </section>
-            </div>
-
-
-
-            <p class="legal">&copy; <span id="year">x</span> &bull; Burger Time Diner &bull; Seth Elliott </p>
+    <div id="footerWrapper">
+        <footer>
+            <p>&copy; <span id="year">x</span> &bull;  Majestic Motors. &bull; Seth Elliott</p>
         </footer>
     </div>
     
 
-    <script src="js/scripts.js"></script>
+    <script src="js/scripts.js" type="module"></script>
 </body>
 </html>
