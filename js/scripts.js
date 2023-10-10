@@ -19,7 +19,7 @@ for (let x = 0; x < reviews.length; x++) {
 
 
     for (let step = 0; step<reviews[x].stars; step++) {
-        const reviewIndicator = document.createElement('img')
+        const reviewIndicator = document.createElement('img', img.alt = "crown icon")
         reviewIndicator.src = "../images/crown-solid.svg" 
         myRating.appendChild(reviewIndicator)
     }
