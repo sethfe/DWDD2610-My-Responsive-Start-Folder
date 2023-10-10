@@ -54,8 +54,46 @@ html {
     margin-right: auto;
       padding-top: 16px;
     }
+
+    section {
+      padding: 0;
+      margin: auto;
+    }
+
+    section.contact {
+      display: block;
+      justify-content: left;
+      p {
+        font-size: 1.2rem; margin: .5rem;
+      }
+      i {
+        color: $secondaryColor; padding-right: 5px; 
+      }
+      a{
+        display: block;
+        color: $secondaryColor;
+      }
+    }
+
+    section.social {
+      display: flex;
+      justify-content: right;
+      a{
+        display: block;
+        font-size: 1.5rem;
+        margin: .5rem;
+        color: $secondaryColor;
+      }
+    }
+
+
+    
+    
+  
+
   } // end of header
 
+  
   
   
   // navWrapper starts here

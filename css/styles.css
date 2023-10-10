@@ -362,6 +362,36 @@ header .center {
   margin-right: auto;
   padding-top: 16px;
 }
+header section {
+  padding: 0;
+  margin: auto;
+}
+header section.contact {
+  display: block;
+  justify-content: left;
+}
+header section.contact p {
+  font-size: 1.2rem;
+  margin: 0.5rem;
+}
+header section.contact i {
+  color: #ffffee;
+  padding-right: 5px;
+}
+header section.contact a {
+  display: block;
+  color: #ffffee;
+}
+header section.social {
+  display: flex;
+  justify-content: right;
+}
+header section.social a {
+  display: block;
+  font-size: 1.5rem;
+  margin: 0.5rem;
+  color: #ffffee;
+}
 
 #navWrapper {
   background-color: #0d1318;
