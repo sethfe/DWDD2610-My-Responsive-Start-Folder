@@ -1,22 +1,41 @@
-header, nav, main, footer {
-    max-width: 75rem;
+header,  main {
+    max-width: 1240px;
     margin: auto;
 }
 
-/* Navigation Start */
+/* Header Start */
+header {
+    grid-template-columns: 51px auto auto;
+} // end header
 
+/* Nav Start  */
+nav  {
+    justify-self: end;
+    button {display: none;}
+    ul, ul.open {
+        position: relative;
+        display: flex;
+        background-color: transparent;
+        width: auto;
+    } // end ul
 
+    ul li {border: none;}
 
+    ul li a {
+        color: 333;
+        border-radius: 20px;
+        padding: .5rem 1rem;
+        margin-left: .2rem;
+        transition: all .5s ease;
+    } // end anchors
 
-
-.allcards {
-   display: grid;
-    section {
-        flex-basis: calc(33.3333% - (($gutter*2)/4));
+    ul li a:hover {
+        background-color: #eee;
+        color: #333!important;
     }
-}
 
-footer div {
-    display: grid;
-    grid-template-columns: auto auto auto;
-}
+    ul li.active a {
+        color: white;
+    }
+
+} // end nav
