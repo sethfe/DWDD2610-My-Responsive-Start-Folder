@@ -95,6 +95,15 @@ main {
   }
 } // end main
 
+
+// Create the Fort Loop
+@for $i from 1 through 12 {
+  $width: calc($i /12) * 100%;
+  .small-#{$i} {flex-basis: $w;}
+  }
+
+
+
 /* FOOTER  */
 #footerWrapper {
   background-color: #1b1b1b;

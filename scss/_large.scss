@@ -39,3 +39,9 @@ nav  {
     }
 
 } // end nav
+
+// Create the Fort Loop
+@for $i from 1 through 12 {
+    $width: calc($i /12) * 100%;
+    .large-#{$i} {flex-basis: $w;}
+    }
