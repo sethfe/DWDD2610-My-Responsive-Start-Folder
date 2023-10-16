@@ -1,10 +1,10 @@
 /* NAVIGATION STUFF GOES HERE  */
 nav ul {
-   width: 200px;
-} // end nav
+    width: 200px;
+}
 
-// Create the Fort Loop
+// Create the For Loop
 @for $i from 1 through 12 {
-   $width: calc($i /12) * 100%;
-   .medium-#{$i} {flex-basis: $w;}
-   }
+    $w: calc($i /12) *100%;
+    .medium-#{$i} {flex-basis: $w;}
+}

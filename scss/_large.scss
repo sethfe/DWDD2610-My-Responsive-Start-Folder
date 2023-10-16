@@ -1,17 +1,16 @@
-header,  main {
+header, main {
     max-width: 1240px;
     margin: auto;
 }
 
-/* Header Start */
 header {
     grid-template-columns: 51px auto auto;
-} // end header
+}
 
-/* Nav Start  */
-nav  {
+/* NAVIGATION STUFF GOES HERE  */
+nav {
+    button{display: none;}
     justify-self: end;
-    button {display: none;}
     ul, ul.open {
         position: relative;
         display: flex;
@@ -22,7 +21,7 @@ nav  {
     ul li {border: none;}
 
     ul li a {
-        color: 333;
+        color: #333;
         border-radius: 20px;
         padding: .5rem 1rem;
         margin-left: .2rem;
@@ -37,11 +36,10 @@ nav  {
     ul li.active a {
         color: white;
     }
-
 } // end nav
 
-// Create the Fort Loop
+// Create the For Loop
 @for $i from 1 through 12 {
-    $width: calc($i /12) * 100%;
+    $w: calc($i /12) *100%;
     .large-#{$i} {flex-basis: $w;}
-    }
+}

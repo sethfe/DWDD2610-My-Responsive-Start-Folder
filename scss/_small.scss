@@ -1,119 +1,154 @@
-/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+/* Prevent adjustments of font size after orientation changes.  */
 html {
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-}
-
-/*  apply a natural box layout model to all elements  */
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    height: 100%;
+  }
+  /*---- apply a natural box layout model to all elements -------*/
 * {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
 
-/* BODY  */
-body {
-  font-family: $defaultFont;
-  font-size: 16px;
-  font-weight: $lightWeight;
-  min-width: 320px;
-}
+  body {
+    height: 100%;
+    font-family: $defaultFont;
+    font-weight: $normalWeight;
+    color: $fontColor;
+  }
 
-/* HEADER  */
+  /* HEADER */
+ /* #headerWrapper {
+    background-color: white;
+    color: $secondaryColor;
+  } */
+
+ /* HEADER  */
 header {
   display: grid;
   grid-template-columns: 51px auto;
   align-items: center;
-  padding: 0.5rem 2vw;
+  padding: .5rem 2vw;
   h1 {
-    font-size: 1.6rem;
-    font-weight: $lightWeight;
-    padding-left: 0.5rem;
-    color: $primaryColor;
+      font-size: 1.6rem;
+      font-weight: $lightWeight;
+      padding-left: .5rem;
+      color: $primaryColor;
   }
 } // end header
-
-/* NAVIGATION STUFF GOES HERE  */
+  
+ /* NAVIGATION STUFF GOES HERE  */
 nav {
   button {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: transparent;
-    border: none;
-    font-size: 1.5rem;
-    color: #333;
-    padding: .5rem 2vw .5rem 1rem;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: transparent;
+      border: none;
+      font-size: 1.5rem;
+      color: #333;
+      padding: .5rem 2vw .5rem 1rem;
   } // end button
 
   ul {
-    background-color: $menuColor;
-    position: absolute;
-    right: 0;
-    width: 100%;
+      background-color: $menuColor;
+      position: absolute;
+      right: 0;
+      width: 100%;
+      display: none;
   } // end ul
 
-  ul.open {
-    display: block;
-  }
+  ul.open {display: block;}
 
-  ul li {border-bottom: 1px solid rgba(0,0,0,0.1);}
+  ul li {
+      border-bottom: 1px solid rgba(255,255,255,.1);
+  } // end li
 
   ul li a {
-    display: block;
-    padding: .9rem 2vw;
-    font-weight: $lightWeight;
-    color: rgba(255,255,255,0.9);
-    text-decoration: none;
-    text-align: right;
+      display: block;
+      padding: .9rem 2vw;
+      font-weight: $lightWeight;
+      color: rgba(255,255,255,.8);
+      text-decoration: none;
+      text-align: right;
   } // end anchors
 
   ul li.active a {background-color: darken($menuColor, 8%);}
   ul li a:hover {background-color: darken($menuColor, 4%);}
 
-} //end of nav
+} // end nav
+
+main img {
+  width: 100%;
+  height: auto;
+}
+
+// stlying the rows
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1rem 0;
+  padding: 0 8px;
+  //border: red solid 1px;
+}
+
+// stlying the cloumns
+.column {
+  padding: 0 8px;
+  margin: 8px 0;
+  //border: blue dashed 1px;
+}
+
+// Create the For Loop
+@for $i from 1 through 12 {
+  $w: calc($i /12) *100%;
+  .small-#{$i} {flex-basis: $w;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* MAIN  */
 main {
-  p {
-    padding: 0.5rem 2vw;
-    color: #333;
-    line-height: 125%;
+ p {padding: .5rem 2vw; color: #333; line-height: 125%;}
+h1 {
+      padding: 1rem 2vw .5rem 2vw; 
+      font-size: 1.5rem; 
+      color: $secondaryColor;
+      font-weight: $lightWeight
   }
-  h1 {
-    padding: 1rem 2vw 0.5rem 2vw;
-    font-size: 1.5rem;
-    color: $secondaryColor;
-    font-weight: $lightWeight;
-  }
-  .hero {
-    width: 100%;
-  }
+  .hero {width: 100%;}
   .hero img {
-    width: 100%;
-    height: auto;
+      width: 100%;
+      height: auto;
   }
 } // end main
 
 
-// Create the Fort Loop
-@for $i from 1 through 12 {
-  $width: calc($i /12) * 100%;
-  .small-#{$i} {flex-basis: $w;}
-  }
-
-
 
 /* FOOTER  */
-#footerWrapper {
-  background-color: #1b1b1b;
-}
+#footerWrapper {background-color: #1b1b1b; }
 footer {
-  font-size: 0.85rem;
-  padding: 1rem 0;
-  color: #bbb;
-  text-align: center;
-  a {
-    color: #eee;
-  }
+  font-size: .85rem;
+padding: 1rem 0;
+color: #bbb;
+text-align: center;
+a{color: #eee;}
 }
