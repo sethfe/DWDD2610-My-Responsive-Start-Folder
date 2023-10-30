@@ -1,27 +1,28 @@
-header, main {
-    max-width: 1240px;
+header, main, footer {
+    max-width: 75rem;
     margin: auto;
 }
 
+// Header Starts Here
 header {
     grid-template-columns: 51px auto auto;
-}
+} // end header
 
-/* NAVIGATION STUFF GOES HERE  */
+// Nav Starts Here
 nav {
     button{display: none;}
-    justify-self: end;
+    justify-self: right;
     ul, ul.open {
         position: relative;
         display: flex;
         background-color: transparent;
         width: auto;
-    } // end ul
+    } // end ul, ul.open
 
-    ul li {border: none;}
+    ul li {border: none}
 
     ul li a {
-        color: #333;
+        color: $secondaryColor;
         border-radius: 20px;
         padding: .5rem 1rem;
         margin-left: .2rem;
@@ -29,14 +30,16 @@ nav {
     } // end anchors
 
     ul li a:hover {
-        background-color: #eee;
-        color: #333!important;
-    }
+        background-color: $primaryColor;
+        color: white!important;
+    } // end anchors:hover
 
     ul li.active a {
         color: white;
     }
-} // end nav
+}
+
+
 
 // Create the For Loop
 @for $i from 1 through 12 {

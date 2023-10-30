@@ -1,9 +1,15 @@
-$primaryColor: #cc7a26; 
-$secondaryColor: #265b7d;
+$primaryColor: #525252;
+$secondaryColor: hsl(326, 55%, 44%);
+$fontColor: #525252;
 
-$menuColor: #265b7d;
+$menuColor: #AD3278;
 
-$defaultFont:'Spline Sans', sans-serif;
+$logoFont: 'Montserrat Alternates', sans-serif;
+$defaultFont: 'Roboto', sans-serif;
 $lightWeight: 300;
-$normalWeight: 500;
+$normalWeight: 400;
+$mediumWeight: 500;
+$semiBold: 600;
+$boldWeight: 700;
 
+$gutter: 16px;
