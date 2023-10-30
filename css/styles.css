@@ -346,7 +346,7 @@ body h1 {
 header {
   display: grid;
   grid-template-columns: 51px auto;
-  align-items: right;
+  justify-content: right;
   padding: 0.5rem 2vw;
   border-bottom: 1px solid hsl(326, 55%, 44%);
   padding: 0.5rem 16px;

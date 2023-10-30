@@ -32,7 +32,7 @@ html {
   header {
     display: grid;
     grid-template-columns: 51px auto;
-    align-items: right;
+    justify-content: right;
     padding: .5rem 2vw;
     border-bottom: 1px solid $secondaryColor;
     padding: 0.5rem $gutter;
