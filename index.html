@@ -67,7 +67,7 @@
                 <label>Last Name <input type="text" name="lname" autocomplete="family-name" required title="Last Name Here"></label> 
                 <label>Email <input type="email" name="email" autocomplete="email" required title="Your Email"></label> 
                 <label>Mobile Phone <input type="tel" name="phone" autocomplete="tel" required title="Mobile Phone Here"></label>
-                <label>Address <input type="text" name="address" autocomplete="street-address" title="Home Address Here"></label>
+                <label>Address <input type="text" name="address" autocomplete="address-level1" title="Home Address Here"></label>
                 <label>City <input type="text" name="city" autocomplete="address-level2" title="City You Live In"></label>
                 <label> State
                     <select name="state">
@@ -144,21 +144,22 @@
                 <label><input type="checkbox" name="Other">Other</label>
 
                 <h3>Previous School Information</h3> 
-                <select name="School Type">
+                <label>School Type<select name="School Type"> 
                     <option value="No Selection Made">Please Select</option>
                     <option value="High School">High School</option>
                     <option value="College">College</option>
                     <option value="University">University</option>
                     <option value="Other">Other</option>
-                 </select>
-                 <label><input type="date" name="date" value="date"></label>
-            </label>
+                 </select></label>
+               
+                 <label>Graduation Date<input type="date" name="graduation-date"></label>
+            
                 
 
                 <h3>myArkham Account Information</h3>
                 <label>UserName (5-10 letters)<input type="text" required minlength="5" title="UserName that is 5-10 lower case or upper case letters only"></label>
 
-                <label>Password (at least 6 characters long)<input type="password" name="password" required minlength="6" required pattern="[A-Z-z0-9]{5,9}" title="At least 6 characters, letters, or numbers PLEASE!"></label>
+                <label>Password (at least 6 characters long)<input type="password" name="password" minlength="6" required pattern="[A-Z-z0-9]{5,9}" title="At least 6 characters, letters, or numbers PLEASE!"></label>
                <div id="privacy">
                 <p>By appling for admissions to Arkham <br>Univeristy you agree to the univeristies <br><a href="#">Vigilante Mission & Code of Conduct</a>.</p>
                 </div>
