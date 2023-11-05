@@ -471,6 +471,9 @@ form.my-form input:focus {
 form.my-form input:required:valid {
   border-left-color: #70798C;
 }
+form.my-form input[type=checkbox], form.my-form input[type=radio] {
+  margin: 0.3rem 0.3rem 0.3rem 0;
+}
 form.my-form input[type=submit] {
   border: none;
   background-color: #1B263B;

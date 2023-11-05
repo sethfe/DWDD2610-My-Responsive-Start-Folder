@@ -165,6 +165,13 @@ html {
      input:required {border-left-color: lighten($tertiaryColor2, 20%);}
      input:focus {border-left-color: lighten($tertiaryColor2, 30%);}
      input:required:valid {border-left-color: $tertiaryColor;}
+
+      input[type=checkbox], input[type=radio] {
+        margin: .3rem .3rem .3rem 0;
+     
+        
+      }
+   
  
      input[type=submit] {
        border: none;
