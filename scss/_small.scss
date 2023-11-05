@@ -102,7 +102,7 @@ html {
   
    h1 {
          padding: .5rem $gutter; 
-         color: $secondaryColor;
+         color: darken($tertiaryColor, 20%);
          font-weight: $semiBold;
      }
      
