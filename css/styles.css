@@ -455,21 +455,21 @@ form.my-form select {
   margin: 0.1rem 0 1rem 0;
   border: 1px solid #999;
   border-radius: 5px 5px 5px 5px;
-  border-right-width: 5px;
-  border-right-color: #1B263B;
+  border-left-width: 5px;
+  border-left-color: #1B263B;
   font-size: 1rem;
   color: #252323;
   width: 250px;
   padding: 0.5rem 16px;
 }
 form.my-form input:required {
-  border-right-color: red;
+  border-left-color: #8c404a;
 }
 form.my-form input:focus {
-  border-bottom-color: grey;
+  border-left-color: #af505d;
 }
 form.my-form input:required:valid {
-  border-right-color: green;
+  border-left-color: #70798C;
 }
 form.my-form input[type=submit] {
   border: none;

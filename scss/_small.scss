@@ -154,17 +154,17 @@ html {
        margin: .1rem 0 1rem 0;
        border: 1px solid #999;
        border-radius: 5px 5px 5px 5px;
-       border-right-width: 5px;
-       border-right-color: $primaryColor;
+       border-left-width: 5px;
+       border-left-color: $primaryColor;
        font-size: 1rem;
        color: $fontColor;
        width: 250px;
        padding: .5rem $gutter;
      }
  
-     input:required {border-right-color: red;}
-     input:focus {border-bottom-color: grey;}
-     input:required:valid {border-right-color: green;}
+     input:required {border-left-color: lighten($tertiaryColor2, 20%);}
+     input:focus {border-left-color: lighten($tertiaryColor2, 30%);}
+     input:required:valid {border-left-color: $tertiaryColor;}
  
      input[type=submit] {
        border: none;
