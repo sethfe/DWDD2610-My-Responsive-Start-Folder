@@ -1,18 +1,52 @@
+// HEADER STARTS HERE
 header {
-    padding: 1rem $gutter;
-    h1{
-        font-size: 2rem;
+    grid-template-columns: 149px auto auto;
+    padding: .5rem 2vw;
+  div#phone {
+    display: block;
+    justify-self: end;
+    a{
+        color: $primaryColor;
+        text-decoration: none;
+        font-weight: $mediumWeight;
+        font-size: 1.5rem;
+    } // end anchor
+    a:hover {color: $tertiaryColor;}
+  } // end phone
+} // end header
+
+// NAVIGATION STARTS HERE
+div#hamburger, div#closex {display:none;}
+nav {
+    height: auto;
+    ul {
+        display: flex;
+        justify-content: end;
+        border: none;
+        background-color: transparent;
     }
-}
+    li {border: none;}
+    ul li a {
+      color: $primaryColor;
+      border-radius: 20px;
+      padding: .5rem 1rem;
+      margin-left: .2rem;
+      transition: all .5s ease;
+    } // end anchors
+    ul li a:hover {
+        background-color: lighten($primaryColor, 25%);
+        color: white!important;
+        text-decoration: none;
+    }
+    ul li.active a {
+        background-color: darken($primaryColor, 5%);
+        color: white;
+        text-decoration: none;
+    }
 
-nav ul {
-    width: 250px;
-    
-}
+  } // end nav
 
-
-// Create the For Loop
-@for $i from 1 through 12 {
-    $w: calc($i /12) *100%;
-    .medium-#{$i} {flex-basis: $w;}
-}
+div#headerWrapper {grid-row-start: 1;}
+div#navWrapper {grid-row-start: 2;}
+div#mainWrapper {grid-row-start: 3;}
+div#footerWrapper {grid-row-start: 4;}
