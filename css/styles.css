@@ -331,172 +331,209 @@ html {
 
 body {
   height: 100%;
-  display: grid;
-  font-family: "Lato", sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-weight: 400;
-  color: #252323;
+  color: #252523;
 }
 
-div#headerWrapper {
-  grid-row-start: 1;
-  box-shadow: 5px 5px 5px #a8aeba;
+#headerWrapper {
+  background-color: white;
+  color: #93C6D6;
 }
 
 header {
-  display: grid;
-  grid-template-columns: 149px auto 100px;
-  align-items: center;
-  padding: 0.5rem 2vw;
-}
-header div#phone {
-  display: none;
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem 16px;
+  gap: 8px;
 }
 header h1 {
-  display: flex;
   margin: 0;
-  font-family: "Oswald", sans-serif;
+  padding-bottom: 0.3rem;
   font-size: 2rem;
+  font-family: "Righteous", sans-serif;
   font-weight: 400;
-  padding-left: 0.5rem;
-  color: #1B263B;
+  color: #19535F;
+}
+header p {
+  margin: 0;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #19535F;
 }
 
-div#navWrapper {
-  grid-row-start: 4;
+#navWrapper {
+  background-color: #19535F;
 }
 
-div#hamburger a, div#closex a {
-  display: block;
-  padding: 0.8rem 2vw;
-  font-size: 1.5rem;
-  color: #1B263B;
-  text-decoration: none;
-  text-align: right;
+nav button {
+  position: relative;
+  height: 46px;
+  width: 46px;
+  background: none;
+  border: none;
+}
+nav button .line {
+  position: absolute;
+  height: 2px;
+  width: 60%;
+  left: 20%;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+nav button .top {
+  top: 29%;
+}
+nav button .middle {
+  top: 48%;
+}
+nav button .bottom {
+  top: 67%;
 }
 
-div#closex a {
-  margin-right: 2vw;
+#hamburgerBtn.open .top {
+  transform: rotate(45deg);
+  top: 48%;
+}
+#hamburgerBtn.open .middle, #hamburgerBtn.open .bottom {
+  transform: rotate(-45deg);
+  top: 48%;
 }
 
-nav {
-  height: 100vh;
-}
 nav ul {
-  border: none;
+  display: none;
+  margin: 0;
+  padding: 0;
 }
-nav ul li {
-  border: none;
+nav ul li.active a {
+  background-color: rgba(0, 0, 0, 0.25);
 }
 nav ul li a {
   display: block;
-  color: #1B263B;
-  padding: 0.5rem 2vw;
+  padding: 0.75rem 16px;
+  font-size: 1.6rem;
+  color: white;
   text-decoration: none;
-  text-align: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
 }
 nav ul li a:hover {
-  -webkit-text-decoration: underline 3px #E7AF36;
-          text-decoration: underline 3px #E7AF36;
+  background-color: rgba(0, 0, 0, 0.5);
 }
-nav ul li.active a {
-  background-color: transparent;
-  -webkit-text-decoration: underline 3px #E7AF36;
-          text-decoration: underline 3px #E7AF36;
+nav ul.open {
+  display: block;
 }
 
-div#mainWrapper {
-  grid-row-start: 2;
-  padding: 1rem 16px;
+.hero {
+  position: relative;
 }
-
-main h1 {
-  padding: 0.5rem 16px;
-  color: #434853;
+.hero video {
+  width: 100%;
+  height: auto;
+}
+.hero div {
+  position: absolute;
+  height: 50%;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  color: white;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 40%);
+}
+.hero div h1 {
+  padding: 0;
+  padding-left: 16px;
   font-weight: 600;
+  -webkit-text-decoration: underline 2px solid #CBBF7A;
+          text-decoration: underline 2px solid #CBBF7A;
 }
-
-div#personalInfo {
-  padding: 0.2rem 16px;
-  border-bottom: 1px solid #eee;
-}
-
-div#privacy p {
-  font-weight: 300;
-  font-size: 0.8rem;
-}
-div#privacy a {
-  color: #462025;
+.hero div p {
+  padding: 0;
+  padding-left: 16px;
+  padding-bottom: 1rem;
   font-weight: 500;
 }
-
-form.my-form {
-  margin: 0.5rem 16px;
-}
-form.my-form label {
-  display: block;
-  font-size: 0.8rem;
-  color: #4e5462;
-  padding-top: 0.2rem;
-}
-form.my-form h3 {
-  font-size: 0.9rem;
-  color: #1B263B;
-  margin: 1.5rem 0 0.2rem 0;
-  border-bottom: 1px solid #eee;
-}
-form.my-form input[type=text],
-form.my-form input[type=email],
-form.my-form input[type=tel],
-form.my-form input[type=number],
-form.my-form input[type=password],
-form.my-form input[type=date],
-form.my-form select {
-  display: block;
-  margin: 0.1rem 0 1rem 0;
-  border: 1px solid #999;
-  border-radius: 5px 5px 5px 5px;
-  border-left-width: 5px;
-  border-left-color: #1B263B;
-  font-size: 1rem;
-  color: #252323;
-  width: 250px;
+.hero div a {
   padding: 0.5rem 16px;
-}
-form.my-form input:required {
-  border-left-color: #8c404a;
-}
-form.my-form input:focus {
-  border-left-color: #af505d;
-}
-form.my-form input:required:valid {
-  border-left-color: #70798C;
-}
-form.my-form input[type=checkbox], form.my-form input[type=radio] {
-  margin: 0.3rem 0.3rem 0.3rem 0;
-}
-form.my-form input[type=submit] {
-  border: none;
-  background-color: #1B263B;
-  color: white;
+  margin: auto 1rem;
   border-radius: 20px;
-  padding: 0.75rem 1.5rem;
-  margin: 2rem 0;
-  width: 250px;
-  font-size: 1.2rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-       appearance: none;
+  background-color: #93C6D6;
+  color: #252523;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 0 2px #19535F;
 }
-form.my-form input[type=submit]:hover {
-  background-color: #d19719;
+.hero div a:hover {
+  background-color: #247687;
+  color: white;
+}
+.hero div a i {
+  margin-left: 15px;
+}
+
+main h1, main p {
+  padding: 0.75rem 16px;
+}
+
+.flip-card {
+  background: none;
+  width: 420px;
+  height: 340px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  border-radius: 20px;
+  width: 100%;
+  height: 100%; /* Safari */
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: transparent;
+  color: black;
+}
+.flip-card-front img {
+  border-radius: 20px;
+}
+
+.flip-card-back {
+  background-color: #19535F;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.allCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 16px;
+  gap: 1rem;
 }
 
 #footerWrapper {
-  background-color: #1B263B;
+  background-color: #19535F;
 }
 
 footer {
-  padding: 1rem 16px;
+  padding: 0.5rem 16px;
 }
 footer p {
   margin: 0;
@@ -507,69 +544,38 @@ footer p {
 
 @media only screen and (min-width: 35rem) {
   header {
-    grid-template-columns: 149px auto auto;
-    padding: 0.5rem 2vw;
+    padding: 2rem 16px;
   }
-  header div#phone {
-    display: block;
-    justify-self: end;
+  header h1 {
+    font-size: 2rem;
   }
-  header div#phone a {
-    color: #1B263B;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1.5rem;
-  }
-  header div#phone a:hover {
-    color: #70798C;
-  }
-  div#hamburger, div#closex {
+  nav button {
     display: none;
   }
-  nav {
-    height: auto;
+  #primaryNav {
+    display: flex;
   }
   nav ul {
-    display: flex;
-    justify-content: end;
-    border: none;
-    background-color: transparent;
+    margin-left: 16px;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
   }
-  nav li {
-    border: none;
+  nav ul li {
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
   }
   nav ul li a {
-    color: #1B263B;
-    border-radius: 20px;
-    padding: 0.5rem 1rem;
-    margin-left: 0.2rem;
-    transition: all 0.5s ease;
+    border: none;
+    font-size: 1rem;
+    padding: 1rem 16px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: background 0.3s linear;
   }
   nav ul li a:hover {
-    background-color: #435e92;
-    color: white !important;
-    text-decoration: none;
-  }
-  nav ul li.active a {
-    background-color: #131b2a;
-    color: white;
-    text-decoration: none;
-  }
-  div#headerWrapper {
-    grid-row-start: 1;
-  }
-  div#navWrapper {
-    grid-row-start: 2;
-  }
-  div#mainWrapper {
-    grid-row-start: 3;
-  }
-  div#footerWrapper {
-    grid-row-start: 4;
+    background: #14414b;
   }
 }
 @media only screen and (min-width: 64rem) {
-  header, nav, main {
+  header, nav, main, footer {
     max-width: 75rem;
     margin: auto;
   }

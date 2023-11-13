@@ -1,52 +1,35 @@
-// HEADER STARTS HERE
 header {
-    grid-template-columns: 149px auto auto;
-    padding: .5rem 2vw;
-  div#phone {
-    display: block;
-    justify-self: end;
-    a{
-        color: $primaryColor;
-        text-decoration: none;
-        font-weight: $mediumWeight;
-        font-size: 1.5rem;
-    } // end anchor
-    a:hover {color: $tertiaryColor;}
-  } // end phone
-} // end header
+    padding: 2rem $gutter;
+    h1{
+        font-size: 2rem;
+    }
+}
 
-// NAVIGATION STARTS HERE
-div#hamburger, div#closex {display:none;}
+// NAVIGATION BEGINS HERE
+nav button {display: none;}
+#primaryNav {display: flex;}
 nav {
-    height: auto;
+
     ul {
-        display: flex;
-        justify-content: end;
-        border: none;
-        background-color: transparent;
+    margin-left: $gutter;
+    border-left: 1px solid rgba(255,255,255,0.1);
     }
-    li {border: none;}
+    ul li {
+        border-right: 1px solid rgba(255,255,255,0.1);
+    }
     ul li a {
-      color: $primaryColor;
-      border-radius: 20px;
-      padding: .5rem 1rem;
-      margin-left: .2rem;
-      transition: all .5s ease;
-    } // end anchors
+        //display: block;
+        border: none; //undo small screen top  border
+        font-size: 1rem;
+        padding: 1rem $gutter;
+        color: rgba(255,255,255,1);
+        text-decoration: none;
+        // transition 
+        -webkit-transition: background 0.3s linear;
+        transition: background 0.3s linear;
+    }
     ul li a:hover {
-        background-color: lighten($primaryColor, 25%);
-        color: white!important;
-        text-decoration: none;
-    }
-    ul li.active a {
-        background-color: darken($primaryColor, 5%);
-        color: white;
-        text-decoration: none;
+        background: darken($menuColor, 5%);
     }
 
-  } // end nav
-
-div#headerWrapper {grid-row-start: 1;}
-div#navWrapper {grid-row-start: 2;}
-div#mainWrapper {grid-row-start: 3;}
-div#footerWrapper {grid-row-start: 4;}
+}// end nav
