@@ -363,10 +363,6 @@ header p {
   color: #19535F;
 }
 
-#navWrapper {
-  background-color: #19535F;
-}
-
 nav button {
   position: relative;
   height: 46px;
@@ -401,6 +397,9 @@ nav button .bottom {
   top: 48%;
 }
 
+nav {
+  background-color: #19535F;
+}
 nav ul {
   display: none;
   margin: 0;
@@ -431,56 +430,39 @@ nav ul.open {
   width: 100%;
   height: auto;
 }
-.hero div {
+.hero div.overlay {
   position: absolute;
-  height: 50%;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  color: white;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 40%);
+  height: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: #FCF5EE;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.2) 40%);
 }
-.hero div h1 {
-  padding: 0;
+.hero div.overlay h2 {
   padding-left: 16px;
-  font-weight: 600;
+  padding-bottom: 0;
   -webkit-text-decoration: underline 2px solid #CBBF7A;
           text-decoration: underline 2px solid #CBBF7A;
+  text-shadow: 0 0 2px #000;
 }
-.hero div p {
-  padding: 0;
-  padding-left: 16px;
-  padding-bottom: 1rem;
+.hero div.overlay p {
+  padding-top: 0;
   font-weight: 500;
-}
-.hero div a {
-  padding: 0.5rem 16px;
-  margin: auto 1rem;
-  border-radius: 20px;
-  background-color: #93C6D6;
-  color: #252523;
-  font-family: "Quicksand", sans-serif;
-  font-weight: 500;
-  text-align: center;
-  text-decoration: none;
-  box-shadow: 0 0 2px #19535F;
-}
-.hero div a:hover {
-  background-color: #247687;
-  color: white;
-}
-.hero div a i {
-  margin-left: 15px;
+  text-shadow: 0 0 2px #000;
 }
 
+main {
+  background-color: #f9ebdd;
+}
 main h1, main p {
   padding: 0.75rem 16px;
 }
 
 .flip-card {
-  background: none;
-  width: 420px;
-  height: 340px;
+  background: transparent;
+  width: 300px;
+  height: 300px;
   perspective: 1000px;
 }
 
@@ -499,33 +481,42 @@ main h1, main p {
 
 .flip-card-front, .flip-card-back {
   position: absolute;
-  border-radius: 20px;
   width: 100%;
   height: 100%; /* Safari */
   backface-visibility: hidden;
 }
 
-.flip-card-front {
-  background-color: transparent;
-  color: black;
-}
 .flip-card-front img {
   border-radius: 20px;
+  width: 100%;
+  height: 100%;
 }
 
 .flip-card-back {
+  padding: 2vw 16px;
+  border-radius: 20px;
   background-color: #19535F;
   color: white;
   transform: rotateY(180deg);
 }
+.flip-card-back h1 {
+  font-size: 1.5rem;
+}
+.flip-card-back h2 {
+  font-size: 1rem;
+}
+.flip-card-back p {
+  font-size: 0.7rem;
+}
 
 .allCards {
+  margin: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-items: center;
-  padding: 1rem 16px;
-  gap: 1rem;
+  align-self: center;
+  gap: 20px;
+  padding: 20px;
 }
 
 #footerWrapper {
@@ -556,7 +547,7 @@ footer p {
     display: flex;
   }
   nav ul {
-    margin-left: 16px;
+    margin-left: 2rem 16px;
     border-left: 1px solid rgba(255, 255, 255, 0.1);
   }
   nav ul li {

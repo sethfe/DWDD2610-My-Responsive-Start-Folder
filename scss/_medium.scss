@@ -6,12 +6,13 @@ header {
 }
 
 // NAVIGATION BEGINS HERE
+
 nav button {display: none;}
 #primaryNav {display: flex;}
 nav {
 
     ul {
-    margin-left: $gutter;
+    margin-left: 2rem $gutter;
     border-left: 1px solid rgba(255,255,255,0.1);
     }
     ul li {
@@ -33,3 +34,4 @@ nav {
     }
 
 }// end nav
+
