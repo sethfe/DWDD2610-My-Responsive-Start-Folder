@@ -569,4 +569,7 @@ footer p {
     max-width: 75rem;
     margin: auto;
   }
+  nav button {
+    display: none;
+  }
 }
