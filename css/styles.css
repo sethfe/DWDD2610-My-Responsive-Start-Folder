@@ -547,7 +547,6 @@ footer p {
     display: flex;
   }
   nav ul {
-    margin-left: 2rem 16px;
     border-left: 1px solid rgba(255, 255, 255, 0.1);
   }
   nav ul li {
