@@ -19,210 +19,109 @@ html {
     color: $fontColor;
   }
 
-// HEADER BEGINS HERE
-  #headerWrapper {
-    background-color: white;
-    color: $secondaryColor;
-  }
+
 
   header {
-    display: flex;
-    align-items: flex-end;
-    padding: 1rem $gutter;
-    gap: 8px;
-    h1 {
-        margin: 0;
-        padding-bottom: .3rem;
-        font-size: 2rem;
-        font-family: $logoFont;
-        font-weight: $normalWeight;
-        color: $primaryColor;
-    }
-    p {
-      margin: 0;
-      
-      font-family: $defaultFont;
-      font-size: 1rem;
-      font-weight: $normalWeight;
-      color: $primaryColor;
+  padding: .75rem $gutter;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  #phone{display: none;}
+  }
 
-    }
-  } // end header
+  /*
+  #navWrapper {
+    background-color: #eee;
+  }
 
-// NAVIGATION BEGINS HERE
-
-
-  nav button {
-    position: relative;
-    height: 46px;
-    width: 46px;
-    background: none;
-    border: none;
-    .line {
-      position: absolute;
-      height: 2px;
-      width: 60%;
-      left: 20%;
-      background-color: white;
-      transition: all .3s ease;
-    } // end line
-    .top {top: 29%;}
-    .middle {top: 48%;}
-    .bottom {top: 67%;}
-  } // end nav 
-
-    #hamburgerBtn.open {
-      .top{
-        transform: rotate(45deg);
-        top: 48%;
-      }
-      .middle, .bottom {
-        transform: rotate(-45deg);
-        top: 48%;
-      }
-    } // end open
-
- // NAVIGATION BEGINS HERE
-    nav {
-      background-color: $primaryColor;
-      ul {
-        display: none;
-        margin: 0;
+  nav {
+    ul {
+        list-style-type: none;
         padding: 0;
-      }
-      ul li.active a{background-color: rgba(0,0,0,0.25);}
-      ul li a {
+        margin: 0;
+        display: flex;
+        li {flex: 1;}
+    }
+    li.active {background-color: $primaryColor;}
+    a {
         display: block;
-        padding: .75rem $gutter;
-        font-size: 1.6rem;
-        color: white;
+        padding: 0.75rem;
+        color: #333333;
+        text-align: center;
         text-decoration: none;
-        border-top: 1px solid rgba(0,0,0,0.2);
-      }
-      ul li a:hover {
-        background-color: rgba(0,0,0,0.5);
-      }
-      // Toggle Nav bar to expand down
-      ul.open {display: block;}
-    } // end nav
+        &:hover {color: black;}
+    }
+  }
+  */
+  h2 {
+    color: $fontColor;
+    font-size: 1.75rem;
+    font-weight: $mediumWeight;
+    padding: 1.75rem $gutter;
+    margin: 0;
 
-// HERO BEGINS HERE
-    .hero {
-      position: relative;
-      video {
+}
+
+  div.reviews {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    section {
+      padding: 7px;
+      img {
         width: 100%;
         height: auto;
+        clip-path: circle(50% at 50% 50%);
+        transition: transform 1s;
+        &:hover {transform: rotate(15deg);}
       }
-    div.overlay{
-     position: absolute;
-     height: 0;
-     top: 0;
-     left: 0;
-     right: 0;
-     color: $tertiaryColor2;
-     background: linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.2) 40%);
-     h2 {
-      padding-left: $gutter;
-      padding-bottom: 0;
-      text-decoration: underline 2px solid $tertiaryColor;
-      text-shadow: 0 0 2px #000;
-     }
-     p {
-      padding-top: 0;
-      font-weight: $mediumWeight;
-      text-shadow: 0 0 2px #000;
-     }
+    } // end section
+  } // end reviews 
+
+ 
+// Our Services Starts Here
+  .our-services {
+    display: grid;
+    gap: 8px;
+    padding: .75rem $gutter;
+   
+    section {
+      position: relative;
+      border: none;
+      border-radius: 10px;
+      overflow: hidden;
+   
+      h2{
+        background-color: $primaryColor;
+        font-size: 1.2rem;
+        font-weight: $normalWeight;
+        margin: 0;
+        padding: .5rem $gutter;
+        text-align: center;
+        color: white;
+      }
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      img:last-child {
+        position: absolute;
+        bottom: 0;
+      }
     }
-  } // end hero
-
-  //MAIN BEGINS HERE
-  main {
-    background-color: darken($tertiaryColor2, 4%);
-    h1, p{
-      padding: .75rem $gutter;
-    }
-  }
-  
-  
-
- // Flips Cards Begin Here
- .flip-card {
-  background: transparent;
-  width: 300px;
-  height: 300px;
-  perspective: 1000px; 
-}
+  } // end our-services
 
 
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
-  backface-visibility: hidden;
-}
-
-
-.flip-card-front {
-
-  img {
-    border-radius: 20px;
+// Swiper Stuff Starts Here
+  .swiper, .swiper img {
     width: 100%;
-    height: 100%;
-  
-  }
- 
-}
-
-
-.flip-card-back {
-  h1 {
-    font-size: 1.5rem;
-  }
-  h2 {
-    font-size: 1rem;
-  }
-  p {
-    font-size: .7rem;
-  }
-  padding: 2vw $gutter;
-  border-radius: 20px;
-  background-color: $primaryColor;
-  color: white;
-  transform: rotateY(180deg);
-}
-
-.allCards {
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-self: center;
-  gap: 20px;
-  padding: 20px;
-}
+    height: auto;
+    position: relative;
+  } // end swiper
 
 
 
  
-
-    
-  
 
 // footer begins here
 #footerWrapper {
@@ -237,4 +136,3 @@ footer {
         color: white;
     }
 }
-
