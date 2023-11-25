@@ -384,13 +384,13 @@ div.reviews {
   grid-template-columns: 1fr 1fr;
 }
 div.reviews section {
-  padding: 7px;
+  padding: 8px;
 }
 div.reviews section img {
   width: 100%;
   height: auto;
-  -webkit-clip-path: circle(50% at 50% 50%);
-          clip-path: circle(50% at 50% 50%);
+  -webkit-clip-path: circle(50% at 50%);
+          clip-path: circle(50% at 50%);
   transition: transform 1s;
 }
 div.reviews section img:hover {
@@ -531,7 +531,7 @@ footer p {
   header #phone {
     display: block;
     text-align: center;
-    padding-right: 2rem 16px;
+    padding-right: 2rem;
   }
   header #phone a {
     color: #204B57;

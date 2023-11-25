@@ -66,11 +66,11 @@ html {
     display: grid;
     grid-template-columns: 1fr 1fr;
     section {
-      padding: 7px;
+      padding: 8px;
       img {
         width: 100%;
         height: auto;
-        clip-path: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50%);
         transition: transform 1s;
         &:hover {transform: rotate(15deg);}
       }
