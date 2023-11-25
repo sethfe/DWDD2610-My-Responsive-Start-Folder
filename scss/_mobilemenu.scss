@@ -52,14 +52,14 @@ nav button {
 	#primaryNav > li:hover > a {background: rgba(0,0,0,.5);}
 	#primaryNav li.projects > a:after {
         font-size: 1rem;
-		font-size: $mediumWeight;
+		font-weight: $mediumWeight;
 		content: "\25BC";
 		color: white;
 		float: right;
 	}
 	#primaryNav li.estimates > a:after {
         font-size: 1rem;
-		font-size: $mediumWeight;
+		font-weight: $mediumWeight;
 		content: "\25BC";
 		color: white;
 		float: right;
