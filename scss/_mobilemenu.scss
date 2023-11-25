@@ -51,13 +51,15 @@ nav button {
 	/* Submenus – optional .parent class indicates dropdowns */
 	#primaryNav > li:hover > a {background: rgba(0,0,0,.5);}
 	#primaryNav li.projects > a:after {
-        font-size: .75rem;
+        font-size: 1rem;
+		font-size: $mediumWeight;
 		content: "\25BC";
 		color: white;
 		float: right;
 	}
 	#primaryNav li.estimates > a:after {
-        font-size: .75rem;
+        font-size: 1rem;
+		font-size: $mediumWeight;
 		content: "\25BC";
 		color: white;
 		float: right;
