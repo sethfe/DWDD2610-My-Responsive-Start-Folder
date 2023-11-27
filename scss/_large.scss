@@ -1,25 +1,42 @@
-header, nav, main, footer {
+header,  nav, main, footer {
     max-width: 75rem;
     margin: auto;
 }
 
-// nav starts here
-nav ul li a {
-    font-size: .9rem;
-    padding: .5rem 1.2rem;
-} // end nav
 
 
-// Client Reviews Starts Here
-.reviews {
-    section {
-      grid-template-columns: 200px auto;
-      column-gap: 8px;
-    } // end section
-  } // end reviews 
+// Nav Starts Here
+#hamburgerBtn {display: none;}
+nav {
+    position: static;
+    transform: translateX(0);
+    width: auto;
+    div {display: none;}
+    ul {
+       font-size: .9rem;
+        display: flex;
+        margin: 0;
+   
+       
+        
+    }
+    ul li a {
+        border: none;
+        padding-left: $gutter;
+        padding-right: $gutter;
+    }
+   
+} // End Nav
 
-  // Our Services Starts Here
-  .our-services {
+
+// Start Hotel Cards
+#hotelCards {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  } // end our-services
+    grid-template-columns: 1fr 1fr;;
+    section {
+      grid-template-areas: 
+      "photo name"
+      "photo address"
+      "photo phone";
+    }
+  } // End Hotel Cards

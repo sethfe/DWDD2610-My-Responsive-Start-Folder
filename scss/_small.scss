@@ -19,109 +19,146 @@ html {
     color: $fontColor;
   }
 
+  #pageWrapper {
+    position: relative;
+    overflow-x: hidden;
+  }
+.moveOver>.content{transform: translateX(-180px);}
+.content {transition: transform 500ms ease;}
 
+  // Header Starts Here
 
   header {
-  padding: .75rem $gutter;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  #phone{display: none;}
-  }
-
-  /*
-  #navWrapper {
-    background-color: #eee;
-  }
-
-  nav {
-    ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        li {flex: 1;}
-    }
-    li.active {background-color: $primaryColor;}
-    a {
-        display: block;
-        padding: 0.75rem;
-        color: #333333;
-        text-align: center;
-        text-decoration: none;
-        &:hover {color: black;}
-    }
-  }
-  */
-  h2 {
-    color: $fontColor;
-    font-size: 1.75rem;
-    font-weight: $mediumWeight;
-    padding: 1.75rem $gutter;
-    margin: 0;
-
-}
-
-  div.reviews {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    section {
-      padding: 8px;
-      img {
-        width: 100%;
-        height: auto;
-        clip-path: circle(50% at 50%);
-        transition: transform 1s;
-        &:hover {transform: rotate(15deg);}
-      }
-    } // end section
-  } // end reviews 
-
- 
-// Our Services Starts Here
-  .our-services {
-    display: grid;
-    gap: 8px;
+    grid-template-columns: 60px auto 60px;
+    align-items: center;
     padding: .75rem $gutter;
-   
-    section {
-      position: relative;
-      border: none;
-      border-radius: 10px;
-      overflow: hidden;
-   
-      h2{
-        background-color: $primaryColor;
-        font-size: 1.2rem;
-        font-weight: $normalWeight;
+    h1 {
         margin: 0;
-        padding: .5rem $gutter;
-        text-align: center;
-        color: white;
-      }
-      img {
-        width: 100%;
-        height: auto;
-        display: block;
-      }
-      img:last-child {
-        position: absolute;
-        bottom: 0;
-      }
-    }
-  } // end our-services
-
-
-// Swiper Stuff Starts Here
-  .swiper, .swiper img {
-    width: 100%;
-    height: auto;
-    position: relative;
-  } // end swiper
-
-
+        padding-left: 3rem;
+        padding-bottom: .5rem;
+        font-size: 1.5rem;
+        font-weight: $normalWeight;
+        font-family: $logoFont;
+        color: $primaryColor;
+    }// End h1
+    button {
+      width: 48px;
+      height: 48px;
+      margin: 0;
+      align-self: start;
+      background: none;
+      border: none;
+      font-size:  1.6rem;
+      text-align: right;
+      color: $primaryColor;
+    } // End Button
+  }// End Header
 
  
+// Nav Starts Here
+  nav {
+    width: 180px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateX(100%);
+    background-color: lighten($secondaryColor, 8%);
+   div {
+    display: block;
+    text-align: left;
+    padding: .75rem 1rem;
+    font-family: $logoFont;
+    font-size: 1.5rem;
+    background-color: $menuColor;
+    color: $primaryColor;
+   } // End Div
+   ul {padding: 0;}
+ul li a {
+    display: block;
+    padding: .75rem ;
+    text-align: right;
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    text-decoration: none;
+    color: black;
+    transition: background 0.7s ease;
+    
+} // End Anchors
+ul li a:hover {
+
+  background-color: $primaryColor;
+  color: white;
+} // End Hover
+li.active a {
+  background-color: $primaryColor;
+  color: white;
+}// End Active
+
+
+  } // End Nav
+
+
+
+main {
+  h1 {
+    padding-left: $gutter;
+  }
+} // End Main
+
+
+// Start Hotel Cards
+#hotelCards {
+  display: grid;
+  padding: 1rem $gutter;
+  gap: 20px;
+  section {
+    justify-content: center;
+    background-color: lighten($tertiaryColor, 5%);
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.2);
+    padding: .75rem;
+    display: grid;
+    grid-template-areas: 
+    "name"
+    "photo"
+    "address"
+    "phone";
+  }
+  img{
+   grid-area: photo;
+   width: 100%;
+   height: auto;
+   border-radius: 15px;
+  }
+  h2{
+   grid-area: name;
+   font-size: 1.6rem;
+   padding-bottom: .75rem;
+   margin: 0;
+    }
+  address{
+   grid-area: address;
+   padding-top: .75rem;
+   padding-bottom: .75rem;
+   font-size: 1.1rem;
+
+  }
+  a{
+    grid-area: phone;
+    padding: .75rem 2vw;
+    background-color: $primaryColor;
+    color: white;
+    font-size: 1.1rem;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    height: 46px;
+    &:hover {background-color: lighten($primaryColor, 10%);}
+  }
+} // End Hotel Cards
+
+
 
 // footer begins here
 #footerWrapper {
@@ -135,4 +172,4 @@ footer {
         text-align: center;
         color: white;
     }
-}
+} // End Footer
