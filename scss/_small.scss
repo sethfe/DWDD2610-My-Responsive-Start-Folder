@@ -1,168 +1,330 @@
 /* Prevent adjustments of font size after orientation changes.  */
 html {
-    -moz-text-size-adjust: none;
-    -webkit-text-size-adjust: none;
-    text-size-adjust: none;
-    height: 100%;
-  }
-  /*---- apply a natural box layout model to all elements -------*/
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+
+}
+/*---- apply a natural box layout model to all elements -------*/
 * {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-  }
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
-  body {
-    height: 100%;
-    font-family: $defaultFont;
-    font-weight: $normalWeight;
-    color: $fontColor;
-  }
+body {
+  font-family: $defaultFont;
+  font-weight: $normalWeight;
+  color: $fontColor;
+}
 
-  #pageWrapper {
-    position: relative;
-    overflow-x: hidden;
+/*
+// Header Starts Here
+  #headerWrapper {
+    background-color: white;
+    color: $secondaryColor;
   }
-.moveOver>.content{transform: translateX(-180px);}
-.content {transition: transform 500ms ease;}
-
-  // Header Starts Here
 
   header {
-    display: grid;
-    grid-template-columns: 60px auto 60px;
-    align-items: center;
-    padding: .75rem $gutter;
+    display: flex;
+    align-items: flex-end;
+    padding: 1rem $gutter;
+    gap: 8px;
     h1 {
         margin: 0;
-        padding-left: 3rem;
-        padding-bottom: .5rem;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         font-weight: $normalWeight;
-        font-family: $logoFont;
-        color: $primaryColor;
-    }// End h1
-    button {
-      width: 48px;
-      height: 48px;
-      margin: 0;
-      align-self: start;
-      background: none;
-      border: none;
-      font-size:  1.6rem;
-      text-align: right;
-      color: $primaryColor;
-    } // End Button
-  }// End Header
-
- 
-// Nav Starts Here
-  nav {
-    width: 180px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    transform: translateX(100%);
-    background-color: lighten($secondaryColor, 8%);
-   div {
-    display: block;
-    text-align: left;
-    padding: .75rem 1rem;
-    font-family: $logoFont;
-    font-size: 1.5rem;
-    background-color: $menuColor;
-    color: $primaryColor;
-   } // End Div
-   ul {padding: 0;}
-ul li a {
-    display: block;
-    padding: .75rem ;
-    text-align: right;
-    border-bottom: 1px solid rgba(0,0,0,0.25);
-    text-decoration: none;
-    color: black;
-    transition: background 0.7s ease;
-    
-} // End Anchors
-ul li a:hover {
-
-  background-color: $primaryColor;
-  color: white;
-} // End Hover
-li.active a {
-  background-color: $primaryColor;
-  color: white;
-}// End Active
-
-
-  } // End Nav
-
-
-
-main {
-  h1 {
-    padding-left: $gutter;
-  }
-} // End Main
-
-
-// Start Hotel Cards
-#hotelCards {
-  display: grid;
-  padding: 1rem $gutter;
-  gap: 20px;
-  section {
-    justify-content: center;
-    background-color: lighten($tertiaryColor, 5%);
-    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.2);
-    padding: .75rem;
-    display: grid;
-    grid-template-areas: 
-    "name"
-    "photo"
-    "address"
-    "phone";
-  }
-  img{
-   grid-area: photo;
-   width: 100%;
-   height: auto;
-   border-radius: 15px;
-  }
-  h2{
-   grid-area: name;
-   font-size: 1.6rem;
-   padding-bottom: .75rem;
-   margin: 0;
     }
-  address{
-   grid-area: address;
-   padding-top: .75rem;
-   padding-bottom: .75rem;
-   font-size: 1.1rem;
+  } // end header
+  */
 
+ // Nav Starts Here
+nav {
+  background-color: $menuColor;
+  position: sticky;
+  top: 0;
+  ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      li {flex: 1;}
+ 
+  li.active {
+    background-color: darken($menuColor, 10%);
+    border-radius: 8px;
   }
-  a{
-    grid-area: phone;
-    padding: .75rem 2vw;
-    background-color: $primaryColor;
-    color: white;
-    font-size: 1.1rem;
-    text-align: center;
-    text-decoration: none;
-    border: none;
+  
+  a {
+      display: block;
+      padding: 0.75rem;
+      color: $fontColor;
+      text-align: center;
+      text-decoration: none;
+      img {
+        width: 25px; 
+        height: 25px;
+      }
+      span {display: none;}
+      &:hover {
+        background-color: darken($menuColor, 10%);
+        border-radius: 8px;
+      }
+  } // end anchors
+} // end ul
+} // end nav
+
+main section {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem $gutter;
+  min-height: 100vh;
+  h2 {
+    margin: 0;
+    font-size: 2rem;
+    padding: 1rem $gutter;
+    text-align: left;
+  }
+  p {
+    margin: 0;
+    font-size: 1.2rem;
+    text-align: left;
+    padding: 1rem $gutter;
+  }
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+} // end section
+
+// About Section Starts Here
+#about{
+  background-color: $cohesiveColor;
+  color: white;
+  .bio {
+    align-content: center;
+  h1, h3 {
+    margin: 0;
+    padding: 1rem $gutter;
+    font-family: $titleFont;
+    font-weight: $semiBold;
+  }
+  h1 {
+    font-size: 5rem;
+    padding-bottom: 1rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  p {
+    padding-top: 0;
+    font-size: 1.2rem;
+    line-height: 150%;
+    font-weight: $lightWeight;
+  }
+} // end bio
+}//end about
+
+// Services Section Starts Here
+#services {
+  background-color: $cohesiveColor2;
+  color: white;
+   p, h6 {
+    margin: 0;
+    padding: 1rem $gutter;
+  }
+  .service-cards {
+    padding: 0 $gutter;
+   div{
+    border: 2px solid white;
     border-radius: 10px;
-    height: 46px;
-    &:hover {background-color: lighten($primaryColor, 10%);}
+    margin: 1rem 0;
+    overflow: hidden;
+    h6 {
+      background-color: darken($cohesiveColor2, 15%);
+      font-size: 1.4rem;
+      text-align: center;
+    }
+      a{
+        display: block;
+        background: transparent;
+        border: 2px solid white;
+        border-radius: 8px;
+        padding: 1rem;
+        text-align: center;
+        margin: 0 3rem 1rem 3rem;
+        color: white;
+        text-decoration: none;
+        &:hover {background-color: darken($cohesiveColor2, 15%);}
+      }
+  } // end cards 1-2-3
+} // end service-cards
+} // end services
+
+// My Work Section Starts Here
+#myWork {
+  background-color: $cohesiveColor3;
+  color:white;
+  p, h6 {
+   margin: 0;
+   padding: 1rem $gutter;
+ }
+ .myWork-cards {
+   background-color: $cohesiveColor3;
+   padding: 0 $gutter;
+  div{
+   border: 2px solid white;
+   border-radius: 10px;
+   margin: 1rem 0;
+   overflow: hidden;
+   h6 {
+     background-color: darken($cohesiveColor3, 15%);
+     font-size: 1.4rem;
+     text-align: center;
+   }
+     a{
+       display: block;
+       border: 2px solid white;
+       background-color: transparent;
+       border-radius: 8px;
+       padding: 1rem;
+       text-align: center;
+       margin: 0 3rem 1rem 3rem;
+       color: white;
+       text-decoration: none;
+       &:hover {background-color: darken($cohesiveColor3, 15%);}
+     }
+ } // end div
+} // end myWork Cards
+} // end myWork
+
+// Skills Section Starts Here
+#skills {
+  background-color: $cohesiveColor4;
+  color: white;
+  p, h6 {
+   margin: 0;
+   padding: 1rem $gutter;
+ }
+ .mySkills-cards {
+   padding: 0 $gutter;
+  div{
+   border: 2px solid white;
+   border-radius: 10px;
+   margin: 1rem 0;
+   overflow: hidden;
+   h6 {
+     background-color: darken($cohesiveColor4, 15%);
+     font-size: 1.4rem;
+     text-align: center;
+   }
+ } // end div
+} // end mySkills Cards
+} // end Skills
+
+// Testimonials Section Starts Here
+#testimonials {
+  background-color: $cohesiveColor5;
+  color: white;
+  p, h6 {
+   margin: 0;
+   padding: 1rem $gutter;
+ }
+ .testimonial-cards {
+   padding: 0 $gutter;
+  div{
+   border: 2px solid white;
+   border-radius: 10px;
+   margin: 1rem 0;
+   overflow: hidden;
+   h6 {
+     margin: 0;
+     background-color: darken($cohesiveColor5, 15%);
+     font-size: 1.4rem;
+     text-align: center;
+   }
+ } // end div
+} // end Testimonials Cards
+} // end Testimonials
+
+#contact {
+  background-color: $cohesiveColor8;
+  color: white;
+  .my-form {
+    margin: .5rem $gutter;
   }
-} // End Hotel Cards
+  input[type=text], input[type=email], textarea {
+    display: block;
+    background-color: #f1f1f1;
+    border: 2px solid white;
+    border-radius: 4px;
+    font-size: 1.4rem;
+    width: 300px;
+    padding: .5rem $gutter;
+    margin: 1rem 0;
+   
+  }
+
+  input[type=submit] {
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    border-radius: 4px;
+    padding: .5rem $gutter;
+    margin: 1rem 0;
+    width: 300px;
+    font-size: 1.2rem;
+    -webkit-appearance: none;
+    appearance: none;
+    &:hover {background-color: darken($cohesiveColor8, 15%);}
+  }
+
+  .email-me {
+    padding-top:2rem;
+    a {
+      background-color:transparent;
+      border: 2px solid white;
+      padding: 1rem;
+      border-radius: 10px;
+      color: white;
+      text-decoration: none;
+      &:hover {background-color: darken($cohesiveColor8, 15%);}
+    } // end email anchor
+  } // end email-me
+
+  .social-links {
+    padding-top:2rem;
+    h2 {
+      padding-top: 2rem;
+    }
+    .icons {
+      display: flex;
+      flex-wrap: wrap;
+      padding-top: 2rem;
+      a {
+        padding: 0 $gutter;
+      img {
+        width: 60px;
+        height: auto;
+        
+      }
+      
+      } // end social anchor
+    }
+  
+  } // end social-links
+
+  }// end contact
+
+
 
 
 
 // footer begins here
 #footerWrapper {
-    background-color: $primaryColor;
+    background-color: $secondaryColor;
 }
 footer {
     padding: 0.5rem $gutter;
@@ -172,4 +334,4 @@ footer {
         text-align: center;
         color: white;
     }
-} // End Footer
+}

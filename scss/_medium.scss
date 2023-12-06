@@ -1,32 +1,56 @@
-header {
+/* header {
     padding: 2rem $gutter;
     h1{
         font-size: 2rem;
     }
+} // end header
+*/
+
+// Nav Starts Here
+nav {
+    ul {
+    a {
+        img {display: none;}
+        span {
+            display: block;
+            color: white;
+        }
+    } // end anchors
+  } // end ul
+  } // end nav
+
+#services {
+.service-cards {  
+    div {
+    a {
+    border-radius: 30px;
+    padding: 1.5rem;
+    margin: 0 5rem 1rem 5rem;
+}
+} // end div
+} // end cards
 }
 
-
-
-// Start Hotel Cards
-#hotelCards {
-    section {
-      margin: 0;
-      justify-content: left;
-      grid-template-areas: 
-      "photo name"
-      "photo address"
-      "photo phone";
+#myWork {
+    .myWork-cards {  
+        div {
+        a {
+        border-radius: 30px;
+        padding: 1.5rem;
+        margin: 0 5rem 1rem 5rem;
     }
+    } // end div
+    } // end cards
+    }
+
+
     
-    h2{
-    padding-left: .75rem;
-    padding-bottom: 0;
-      }
-    address{
-     padding-top: 1rem;
-     padding-left: .75rem;
-    }
-   a {
-    margin-left: .75rem;
-   }
-  } // End Hotel Cards
+    
+   
+
+
+
+
+    
+    
+
