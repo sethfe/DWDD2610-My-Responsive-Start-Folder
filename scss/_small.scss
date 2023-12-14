@@ -1,338 +1,281 @@
 /* Prevent adjustments of font size after orientation changes.  */
 html {
-  -moz-text-size-adjust: none;
-  -webkit-text-size-adjust: none;
-  text-size-adjust: none;
-  //scroll-behavior: smooth;
-}
-/*---- apply a natural box layout model to all elements -------*/
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    height: 100%;
+    scroll-behavior: smooth;
+  }
+  /*---- apply a natural box layout model to all elements -------*/
 * {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: $defaultFont;
-  font-weight: $normalWeight;
-  color: $fontColor;
-}
-
-/*
-// Header Starts Here
-  #headerWrapper {
-    background-color: white;
-    color: $secondaryColor;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
   }
 
+  body {
+    height: 100%;
+    font-family: $defaultFont;
+    font-weight: $normalWeight;
+    color: $fontColor;
+  }
+
+ 
+  // Header Start
   header {
-    display: flex;
-    align-items: flex-end;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 70px auto;
+    align-items: center;
     padding: 1rem $gutter;
-    gap: 8px;
+
     h1 {
-        margin: 0;
-        font-size: 1.2rem;
-        font-weight: $normalWeight;
+        font-family: $brandFont;
+        font-size: 1.6rem;
+        font-weight: $boldWeight;
+        color: $primaryColor;
+        align-self: center;
+    }
+    a {
+      align-items: center;
     }
   } // end header
-  */
 
- // Nav Starts Here
+
+// nav starts here
 nav {
-  background-color: $menuColor;
-  position: sticky;
-  top: 0;
-  ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      li {flex: 1;}
- 
-  li.active {
-    background-color: darken($menuColor, 10%);
-    border-radius: 8px;
-  }
-  
-  a {
-      display: block;
-      padding: 0.75rem;
-      color: $fontColor;
-      text-align: center;
-      text-decoration: none;
-      img {
-        width: 25px; 
-        height: 25px;
-      }
-      span {display: none;}
-      &:hover {
-        background-color: darken($menuColor, 10%);
-        border-radius: 8px;
-      }
-  } // end anchors
-} // end ul
-} // end nav
+  padding: 40px;
+  button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: $primaryColor;
+    padding: 2.5rem 3vw 2rem 2rem;
+    font-weight: $mediumWeight;
+    font-size: 1.5rem;
+  } // end button
 
-main section {
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 3rem $gutter;
-  min-height: 100vh;
-  h2 {
-    margin: 0;
-    font-size: 2rem;
-    padding: 1rem $gutter;
-    text-align: left;
-  }
-  p {
-    margin: 0;
-    font-size: 1.2rem;
-    text-align: left;
-    padding: 1rem $gutter;
-  }
-  img {
-    display: block;
+  ul  {
+    background-color: lighten($menuColor, 4%);
+    position: absolute;
+    right: 0;
     width: 100%;
-    height: auto;
-  }
-} // end section
-
-// About Section Starts Here
-#about{
-  background-color: $cohesiveColor;
-  color: white;
-  .bio {
-    align-content: center;
-  h1, h3 {
+    list-style-type: none;
+    padding: 0;
     margin: 0;
-    padding: 1rem $gutter;
-    font-family: $titleFont;
-    font-weight: $semiBold;
-  }
-  h1 {
-    font-size: 5rem;
-    padding-bottom: 1rem;
-  }
-  h3 {
-    font-size: 2rem;
-  }
-  p {
-    padding-top: 0;
-    font-size: 1.2rem;
-    line-height: 150%;
-    font-weight: $lightWeight;
-  }
-} // end bio
-}//end about
+    display: none;
+  } // end ul
 
-// Services Section Starts Here
-#services {
-  background-color: $cohesiveColor2;
-  color: white;
-   p, h6 {
-    margin: 0;
-    padding: 1rem $gutter;
-  }
-  .service-cards {
-    padding: 0 $gutter;
-   div{
-    border: 2px solid white;
-    border-radius: 10px;
-    margin: 1rem 0;
-    overflow: hidden;
-    h6 {
-      background-color: darken($cohesiveColor2, 15%);
-      font-size: 1.4rem;
-      text-align: center;
-    }
-      a{
-        display: block;
-        background: transparent;
-        border: 2px solid white;
-        border-radius: 8px;
-        padding: 1rem;
-        text-align: center;
-        margin: 0 3rem 1rem 3rem;
-        color: white;
-        text-decoration: none;
-        &:hover {background-color: darken($cohesiveColor2, 15%);}
-      }
-  } // end cards 1-2-3
-} // end service-cards
-} // end services
+  ul.open {display: block; } // end ul.open
 
-// My Work Section Starts Here
-#myWork {
-  background-color: $cohesiveColor3;
-  color:white;
-  p, h6 {
-   margin: 0;
-   padding: 1rem $gutter;
- }
- .myWork-cards {
-   background-color: $cohesiveColor3;
-   padding: 0 $gutter;
-  div{
-   border: 2px solid white;
-   border-radius: 10px;
-   margin: 1rem 0;
-   overflow: hidden;
-   h6 {
-     background-color: darken($cohesiveColor3, 15%);
-     font-size: 1.4rem;
-     text-align: center;
-   }
-     a{
-       display: block;
-       border: 2px solid white;
-       background-color: transparent;
-       border-radius: 8px;
-       padding: 1rem;
-       text-align: center;
-       margin: 0 3rem 1rem 3rem;
-       color: white;
-       text-decoration: none;
-       &:hover {background-color: darken($cohesiveColor3, 15%);}
-     }
- } // end div
-} // end myWork Cards
-} // end myWork
-
-// Skills Section Starts Here
-#skills {
-  background-color: $cohesiveColor4;
-  color: white;
-  p, h6 {
-   margin: 0;
-   padding: 1rem $gutter;
- }
- .mySkills-cards {
-   padding: 0 $gutter;
-  div{
-   border: 2px solid white;
-   border-radius: 10px;
-   margin: 1rem 0;
-   overflow: hidden;
-   h6 {
-     background-color: darken($cohesiveColor4, 15%);
-     font-size: 1.4rem;
-     text-align: center;
-   }
- } // end div
-} // end mySkills Cards
-} // end Skills
-
-// Testimonials Section Starts Here
-#testimonials {
-  background-color: $cohesiveColor5;
-  color: white;
-  p, h6 {
-   margin: 0;
-   padding: 1rem $gutter;
- }
- .testimonial-cards {
-   padding: 0 $gutter;
-  div{
-   border: 2px solid white;
-   border-radius: 10px;
-   margin: 1rem 0;
-   overflow: hidden;
-   h6 {
-     margin: 0;
-     background-color: darken($cohesiveColor5, 15%);
-     font-size: 1.4rem;
-     text-align: center;
-   }
- } // end div
-} // end Testimonials Cards
-} // end Testimonials
-
-#contact {
-  background-color: $cohesiveColor8;
-  color: white;
-  .my-form {
-    margin: .5rem $gutter;
-  }
-  input[type=text], input[type=email], textarea {
-    display: block;
-    background-color: #f1f1f1;
-    border: 2px solid white;
-    border-radius: 4px;
-    font-size: 1.4rem;
-    width: 300px;
-    padding: .5rem $gutter;
-    margin: 1rem 0;
-   
-  }
-
-  input[type=submit] {
-    border: 2px solid white;
-    background-color: transparent;
-    color: white;
-    border-radius: 4px;
-    padding: .5rem $gutter;
-    margin: 1rem 0;
-    width: 300px;
-    font-size: 1.2rem;
-    -webkit-appearance: none;
-    appearance: none;
-    &:hover {background-color: darken($cohesiveColor8, 15%);}
-  }
-
-  .email-me {
-    padding-top:2rem;
+  ul li {
+    border-bottom: 1px solid rgba(0,0,0,0.2);
     a {
-      background-color:transparent;
-      border: 2px solid white;
-      padding: 1rem;
-      border-radius: 10px;
+      display: block;
+      padding: .8rem 2vw;
+      font-weight: $normalWeight;
       color: white;
       text-decoration: none;
-      &:hover {background-color: darken($cohesiveColor8, 15%);}
-    } // end email anchor
-  } // end email-me
+      text-align: center;
+    }
+  }
 
-  .social-links {
-    padding-top:2rem;
-    h2 {
-      padding-top: 2rem;
+
+  ul li.active a {background-color: darken($menuColor, 4%);}
+  ul li a:hover {background-color: darken($menuColor, 4%);}
+} // end nav
+
+
+
+ .services-text {
+  margin: 0;
+  padding: 0;
+  h1 {
+    color: $primaryColor;
+    text-align: center;
+    font-size: 3rem;
+    font-family: $brandFont;
+    font-weight: $boldWeight;
+  }
+  h3 {
+    font-size: 1.4rem;
+    font-weight: $mediumWeight;
+    text-align: center;
+    color: $secondaryColor;
+  }
+ } // end services-text
+
+ // HERO BEGINS HERE
+ .hero {
+  position: relative;
+  video {
+    width: 100%;
+    height: auto;
+  } // end video
+  div {
+    position: absolute;
+    top:0;
+    left: 0;
+    color: white;
+    padding-top: 8px;
+    padding-left: 8px;
+      h1{
+        font-size: 1rem;
+        padding: 10px;
+        font-weight: $mediumWeight;
+        background-color: rgba(12, 10, 62, 0.6);
+        border-radius: 8px;
+    } // end h1
+  } // end text-overlay
+} // end hero
+
+.services {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid red;
+  padding: 1rem $gutter;
+  .service-cards {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid blue;
+    gap: 8px;
+    
+  }
+  section {
+    margin: 0;
+    display: block;
+    border: 1px solid green;
+    overflow: hidden;
+    border-radius: 10px;
+    gap: 8px;
+    justify-content: center;
+    img {
+      width: 100%;
+      height: auto;
     }
-    .icons {
-      display: flex;
-      flex-wrap: wrap;
-      padding-top: 2rem;
-      a {
-        padding: 0 $gutter;
-      img {
-        width: 60px;
-        height: auto;
-        
-      }
-      
-      } // end social anchor
+    h3 {
+      margin: 0;
+      padding: 1rem $gutter;
+      text-align: center;
+      color: white;
+      background-color: $secondaryColor;
     }
+    ol {
+      list-style-type: disc;
+    }
+  }
+
+}
+main {
+  h2 {
+    text-align: center;
+  }
+}
+
+.clents {
   
-  } // end social-links
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 
-  }// end contact
+  section {
+   
+    img {
 
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    }
+  }
+}
+
+
+
+
+
+ 
 
 
 
 
 // footer begins here
 #footerWrapper {
-    background-color: $secondaryColor;
+    background-color: $primaryColor;
 }
 footer {
-    padding: 0.5rem $gutter;
-    p {
+    padding: 1rem $gutter;
+  h2 {
+
+    color: white;
+    font-size: 1.5rem;
+   padding-left: 0 $gutter;
+  } // end h2
+//section {}
+section.contact {
+  padding-left: 0 $gutter;
+  p {
+    font-size: 1.3rem; 
+    margin: .5rem;
+  } // end contact p
+  a {
+    border: none;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    &:hover {color: $tertiaryColor2;}
+  } // end contact anchors
+i {
+  font-size: 1.5rem;
+  height: 48px;
+  width: 24px;
+  color: white;
+  &:hover {color: $tertiaryColor2;}
+} // end contact icons  
+}// end contact
+
+section.social {
+  display: flex;
+  justify-content: left;
+  padding-left: 0 $gutter;
+  a {
+    display: block;
+    border: none;
+    font-size: 2rem;
+    margin: .5rem;
+    color: white;
+  } // end socail anchors
+  i {
+    color: white; 
+    padding-top: 1rem;
+    padding-bottom: 1rem; 
+    width: 48px;
+    height: 48px;
+    &:hover {color: $tertiaryColor2;}
+  }// end icons
+}// end socail
+
+section.locations {
+  padding-left: 0 $gutter;
+address {
+  font-size: 1.3rem;
+  color: white;
+  padding: .5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  &:hover {color: $tertiaryColor3;}
+} // end address
+}// end location
+
+    p.legal {
         margin: 0;
-        font-weight: $lightWeight;
+        font-weight: $mediumWeight;
         text-align: center;
         color: white;
-    }
-}
+        border-top: 1px solid white;
+        padding-top: 2rem;
+    } // end legal
+} // end footer

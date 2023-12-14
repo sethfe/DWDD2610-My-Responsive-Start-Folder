@@ -1,203 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Portfolio | Seth Elliott</title>
-    <meta name="description" content="Seth Elliott Single Page Portfolio">
+    <title>Creative Web Solutions | About Us</title>
+    <meta name="description" content="Creative Web Solutions">
     <meta name="author" content="Seth Elliott">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--Google Fonts-->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="css/styles.min.css" rel="stylesheet">
-    
-    <!--Favicon-->
+
+    <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/9f3880ef33.js" crossorigin="anonymous"></script>
     
 </head>
 <body>
-<!--
-    <div id="headerWrapper">
+
+
         <header>
-            <img src="images/logo.png" alt="logo" width="60" height="60">
-            <h1>Front End Developer</h1>
-        </header>
-    </div>
--->
+            <a href="#"><img src="images/logo1x.png" alt="logo" width="70" height="78" srcset="images/logo1x.png 1x, images/logo2x.png 2x, images/logo3x.png 3x"></a>
+            <h1>Creative Web Solutions</h1>
+            <!-- Nav Start -->
+            <nav>
+                <button id="hamburgerBtn">&#9776;</button>
+                <ul id="primaryNav">
+                    <li> <a href="#">About Us</a></li>
+                    <li class="active"><a href="#">Services</a></li>
+                    <li><a href="#">Case Studies</a></li>
+                    <li><a href="#">Developer Tools</a></li>
+                    <li><a href="#">Clients</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav><!-- Nav End -->
+    </header> <!-- end header -->
 
 
-        <nav>
-            <ul>
-                <li class="active"> <a href="#about"><img src="images/user-solid.svg"><span>About</span></a></li>
-                <li><a href="#services"><img src="images/user-gear-solid.svg"><span>Services</span></a></li>
-                <li><a href="#myWork"><img src="images/briefcase-solid.svg"><span>My Work</span></a></li>
-                <li><a href="#skills"><img src="images/list-check-solid.svg"><span>Skills</span></a></li>
-                <li><a href="#testimonials"><img src="images/star-solid.svg"><span>Testimonials</span></a></li>
-                <li><a href="#contact"><img src="images/paper-plane-solid.svg"><span>Contact</span></a></li>
-            </ul>
-        </nav>
-
-
-
+  
+<!-- Main Start -->
+    <div id="mainWrapper">
         <main>
-            <section id="about">
-                <div class="bio">
-                <h1>Hello,</h1>
-                <h3>I'm Seth Elliott</h3>
-                <p>I'm a Front-End Developer and UI/UX Designer based in Salt Lake City, Utah. I have a passion for creating beautiful, intuitive, and highly functional websites and applications.</p>
-                <h3>Education</h3>
-                <p>I hold a Bachelor's degree in Computer Science, specializing in web development, from the University of North Carolina at Chapel Hill.</p>
-            </div> <!-- end bio -->
-            </section> <!-- end about section -->
-
-            <section id="services">
-                <h2>Services</h2>
-                <p>Here are the services that I can offer you or your company.</p>
-
+            <div class="services-text">
+            <h1>Services</h1>
+            <h3>Solutions made just for you!</h3>
+            </div>
+            <div class="hero">
+                <video autoplay muted playinline loop width="720" height="300">
+                    <source src="media/herovideo-hb.mp4" type="video/mp4">
+                    <source src="media/herovideo-hb.webm" type="video/webm">
+                </video>
+                <div>
+                    <h1>Creating better web solutions for you!</h1>
+                </div>
+            </div>
+            <div class="services">
+                <h2>Services We Offer</h2>
                 <div class="service-cards">
-                <div>
-                <h6>Git Version Control</h6>       
-                <p>Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.</p>
-                <a href="#">LEARN MORE</a>
-                </div> <!-- end card1 -->
+                <section>
+                    <h3>Design</h3>
+                    <img src="images/help-design.webp" alt="design" alt="marketing" width="300" height="200">
+                    <ol>
+                        <li>Website Redesign</li>
+                        <li>UI/UX Design</li>
+                        <li>Graphic Web Design</li>
+                        <li>Web and Native App Designs</li>
+                        <li>Design Principles</li>
+                    </ol>
+                </section>
+                <section>
+                    <h3>Branding</h3>
+                    <img src="images/help-branding.webp" alt="branding" alt="marketing" width="300" height="200">
+                    <ol>
+                        <li>Visual Identity</li>
+                        <li>Brand Strategy</li>
+                        <li>Logo Designs</li>
+                        <li>Tyopgraphy</li>
+                        <li>Package Design</li>
+                    </ol>
+                </section>
+                <section>
+                    <h3>Development</h3>
+                    <img src="images/help-development.webp" alt="development" alt="marketing" width="300" height="200">
+                    <ol>
+                        <li>AWS Development</li>
+                        <li>Digital Development</li>
+                        <li>Custom PHP</li>
+                        <li>Application Development</li>
+                        <li>GitHub and Netlify</li>
+                    </ol>
+                </section>
+                <section>
+                    <h3>Marketing</h3>
+                    <img src="images/help-marketing.webp" alt="marketing" width="300" height="200">
+                    <ol>
+                        <li>SEO Strategy</li>
+                        <li>Digital Marketing</li>
+                        <li>Google Analytics</li>
+                        <li>Social Media Marketing</li>
+                        <li>Marketing Tactics</li>
+                    </ol>
+                </section>
+            </div>
+        </div>
 
-                <div>
-                <h6>App Design</h6>
-                <p>App design combines the user interface (UI) and user experience (UX). While UI design is concerned with the look and feel of the app, UX design is concerned with how the app feels and functions.</p>
-                <a href="#">LEARN MORE</a>
-                </div> <!-- end card2 -->
-
-                <div>
-                <h6>Web Development</h6>
-                <p>Web development is the work involved in developing a Web site for the Internet or an intranet. Web development can range from developing a simple single static page of plain text to complex web-based internet applications, electronic businesses, and social network services.</p>
-                <a href="#">LEARN MORE</a>
-                </div> <!-- end card3 -->
-            </div> <!-- end cards -->
-            </section> <!-- end services section -->
-
-            <section id="myWork">
-                <h2>My Work</h2>
-                <p>Take a closer look at some of my top projects and portfolio pieces.</p>
-
-                <div class="myWork-cards">
-                <div>
-                <h6>Project One</h6>
-                <img src="images/project-1.webp" alt="project one" width="450" height="250">
-                 <p>Project One is a project that I did for a client. Worked on redesiging there brand and website through design principles. It was a fun project to work on and I learned a lot.</p>
-                <a href="#">LEARN MORE</a>
-                </div>
-
-                <div>
-                <h6>Project Two</h6>
-                <img src="images/project-2.webp" alt="project two" width="450" height="250">
-                <p>Project Two is a project that I did for myself. It was a fun web based app I built from scratch, I learned a lot of reall neat full-stack tricks and processes.</p>
-                <a href="#">LEARN MORE</a>
-                </div>
-
-                <div>
-                <h6>Project Three</h6>
-                <img src="images/project-3.webp" alt="project three" width="450" height="250">
-                <p>Project Three is a project that I did for the compant I work for. Coming up with new creative back-end and front-end soultions to make our companies programs run more effiencetly and effectively. It was a great opportunity to be apart of a team setting.</p>
-                <a href="#">LEARN MORE</a>
-                </div>
-                </div> <!-- end myWork Cards -->
-
-            </section> <!-- end my work section -->
-
-            <section id="skills">
-                <h2>Skills</h2>
-                <p>Skills that I have learned and developed over the years.</p>
-                <!--Start mySkills Cards-->
-                <div class="mySkills-cards">
-                <div>   
-                <h6>Communication</h6>
-                <img src="images/skills-communication.webp" alt="communication" width="450" height="250">
-                <p>Communication is key. I have learned that communication is key when working with clients. I have learned how to communicate with clients and how to make them happy.</p>
-                </div>
-
-                <div>
-                <h6>Creativeness</h6>
-                <img src="images/skills-creative.webp" alt="Creativeness" width="450" height="250">
-                <p>Creativeness is a skill that I have developed over the years. I have learned how to be creative in my designs and how to make them stand out from the rest.</p>
-                </div>
-
-                <div>
-                <h6>Teamwork</h6>
-                <img src="images/skills-teamwork.webp" alt="teamwork" width="450" height="250">
-                <p>Teamwork is key. I have learned that teamwork is key when working with clients. I have learned how to work with clients and how to make them happy.</p>
-                </div>
-                </div> <!-- end mySkills Cards -->
-            </section> <!-- end skills section -->
-
-            <section id="testimonials">
-                <h2>Testimonials</h2>
-                <p>Take a look at some testimonals from past/current clients, read their experiences on working with me.</p>
-
-                <div class="testimonial-cards">
-
-                <div>  
-                <img src="images/testimonial-1.webp" alt="testimonial-1"  width="450" height="250">
-                <h6>Matthew Taylor</h6>
-                <p>I work for Inter-Connection Soulitons I hired Seth to clean up my code and API Data so that things could run more effective and smoothly, and that would be more clear. Seth came in for a few weeks and got the job done quite nicely. He always asked questions and stayed in contact and gave reports daily and weekly to show what he had been working on.</p>
-                </div>
-
-                <div>
-                <img src="images/testimonial-2.webp" alt="testimonial-2" width="450" height="250">
-                <h6>Steve Milroe</h6>
-                <p>I started up a small business selling my handmade baseball bats. I hired Seth to look start up my web based app and get it spread across all social media platforms. He did a wonderful job. Made my dreams come true, i console with him often to see what directions i need to take now that my business is ramping up.</p>
-                </div>
-                
-                <div>
-                <img src="images/testimonial-3.webp" alt="testimonial-3" width="450" height="250">
-                <h6>Rhonda Lloyd</h6>
-                <p>I hired Seth to for front-end library purposes, to take what someone built and make it shine. Working with him was easy and painless, he was great at communciationg and listening to my ideas for what i wanted. I would hire hiim again. </p>
-                </div>
-                </div> <!-- end testimonial cards -->
-            </section> <!-- end testimonials section -->
-
-            <section id="contact">
-                <h2>Contact</h2>
-                <p>Let's Connect and Create Something Amazing Together!</p>
-               
-                <form method="GET" action="thanks.html" class="my-form" autocomplete="on">
-                    <input type="text" id="name" name="name" placeholder="Name" required>
-                    <input type="email" id="email" name="email" placeholder="Email" required>
-                    <textarea name="message" placeholder="Send me a message..." required></textarea>
-                    <input type="submit" value="Send Message">
-                </form> <!-- end form -->
-         
-
-                <!-- start social links -->
-                <div class="email-me">
-                <h2>Email Me</h2>
-                <p><a href="mailto:seth123elliott@gmail.com">seth123elliott@gmail.com</a></p>
-                </div> <!-- end email me div -->
-
-                <div class="social-links">
-                <h2>Follow me and my work</h2>
-                <div class="icons">
-                <a href="#"><img src="images/icons8-linkedin.svg"></a>
-                <a href="#"><img src="images/icons8-github.svg"></a>
-                <a href="#"><img src="images/icons8-behance.svg"></a>
-                <a href="#"><img src="images/icons8-dribbble.svg"></a>
-                <a href="#"><img src="images/icons8-instagram-old.svg"></a>
-                </div> <!-- end icons -->
-                </div><!-- end scoial links -->
-            </section> <!-- end contact section -->
+            <div class="clients">
+                <h2>Clients Who Trust Our Solutions</h2>
+                <section>
+                    <img src="images/client-A.webp" alt="client-a" width="150" height="50">
+                    <img src="images/client-B.webp" alt="client-b" width="150" height="50">
+                    <img src="images/client-C.webp" alt="client-c" width="150" height="50">
+                    <img src="images/client-D.webp" alt="client-d" width="150" height="50">
+                    <img src="images/client-E.webp" alt="client-e" width="150" height="50">
+                    <img src="images/client-F.webp" alt="client-f" width="150" height="50">
+                </section>
+            </div>
+            
         </main>
+    </div>
 
-<!--Footer Starts Here-->
-    <div>
-        <footer id="footerWrapper">
-            <p>&copy; <span id="year">x</span> &bull; Seth Elliott</p>
+    <div id="footerWrapper">
+        <footer>
+            <div>
+                <h2>Creative Web Solutions</h2>
+                
+                <section class="social">
+                    <a href="#"><i class="fa-brands fa-square-behance"></i></a>
+                    <a href="#"><i class="fa-brands fa-square-dribbble"></i></a>
+                    <a href="#"><i class="fa-brands fa-codepen"></i></a>
+                    <a href="#"><i class="fa-brands fa-square-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                    </section>
+                <section class="contact">
+                    <p><a href="mailto:creativeweb.solutions@gmail.com"><i class="fa-solid fa-square-envelope"></i>creativeweb.solutions@gmail.com</a></p>
+                    <p><a href="tel:18014346990"><i class="fa-solid fa-square-phone-flip"></i>1-801-434-6990</a></p>
+                </section>
+                <section class="locations">
+                <address>123 S 721 W <br> New York <br> New York</address>
+                <address> 1776 Main Street <br> Chicago <br> Illinois</address>
+                <address> 1456 State Street <br> Santa Barbara <br> California</address>
+                </section>
+
+            </div>
+
+            
+            <p class="legal">&copy; <span id="year">x</span> &bull; Creative Web Solutions &bull; Seth Elliott</p>
         </footer>
-    </div><!--Footer Ends Here-->
+   
+    </div>
     
 
     <script src="js/scripts.js"></script>

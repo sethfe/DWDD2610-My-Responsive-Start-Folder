@@ -1,27 +1,49 @@
-body {
-    display: grid;
-    grid-template-columns: 250px auto;
-} // end body
+header,  main, footer {
+    max-width: 75rem;
+    margin: auto;
+}
 
+// Start Nav
+// Header Starts Here
+header {
+    grid-template-columns: 70px auto auto;
+} // end header
 
-nav ul {
-    margin: 1rem 1rem 1rem 1rem;
-    padding: 3rem;
-    flex-direction: column;
-    text-align: right;
-    height: 100vh;
-    justify-content: center;
-    position: fixed;
-    li {flex: none;}
+// Nav Starts Here
+nav {
+    button{display: none;}
+    justify-self: right;
+    ul, ul.open {
+        position: relative;
+        display: flex;
+        background-color: transparent;
+        width: auto;
+    } // end ul, ul.open
+
+    ul li {
+        border: none;
+
+    } // End ul li
+
+    ul li a {
+        font-weight: $mediumWeight;
+        color: $primaryColor;
+        border-radius: 10px;
+        padding: .75rem 1rem;
+        margin-left: .2rem;
+        transition: all .7s ease;
     } // end anchors
 
+    ul li a:hover {
+        background: transparent;
+        color: $secondaryColor;
+    } // end anchors:hover
 
+    ul li.active a {
+        background: transparent;
+        color: $secondaryColor;
+        font-weight: $boldWeight;
+    } // end anchors:hover
+} // End Nav
 
-.service-cards, .myWork-cards, .mySkills-cards, .testimonial-cards {  
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr; 
-    gap: 20px;
-} 
-
-  
 
