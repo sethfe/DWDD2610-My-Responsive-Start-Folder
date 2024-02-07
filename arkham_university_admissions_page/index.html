@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Admissions | Arkham University</title>
+    <meta name="description" content="Arkham University">
+    <meta name="author" content="Seth Elliott">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="css/styles.min.css" rel="stylesheet">
+
+    <!--FavIcon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/9f3880ef33.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+
+    <div id="headerWrapper">
+        <header>
+            <a href="#"><img src="images/logo1x.png" alt="arkahm university logo" width="149" height="100" srcset="images/logo1x.png 1x, images/logo2x.png 2x, images/logo3x.png 3x"></a>
+            <h1>Arkham University</h1>
+           
+               
+           
+            
+            
+            
+            <div id="hamburger"><a href="#closex">&#9776;</a></div>
+        <div id="phone"><a href="180050331993">1-800-503-1993</a></div>
+        </header>
+    </div>
+
+    <div id="navWrapper">
+        <nav>
+           
+            <div id="closex"><a href="#hamburger">x</a></div>
+            <ul>
+                <li><a href="#">Academics</a></li>
+                <li class="active"><a href="#">Admissions Application</a></li>
+                <li><a href="#">Campus Life</a></li>
+                <li><a href="#">Student Life</a></li>
+                <li><a href="#">Athletics</a></li>
+                <li><a href="#">Visit</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="mainWrapper">
+        <main>
+            <h1>Admissions Application</h1>
+            
+            
+           <div id="personalInfo"> <h3>Contact Information</h3></div>
+            <form method="GET" action="thanks.html" class="my-form" autocomplete="on">
+                <label>First Name <input type="text" name="fname" autocomplete="given-name" required title="First Name Here"></label> 
+                <label>Last Name <input type="text" name="lname" autocomplete="family-name" required title="Last Name Here"></label> 
+                <label>Email <input type="email" name="email" autocomplete="email" required title="Your Email"></label> 
+                <label>Mobile Phone <input type="tel" name="phone" autocomplete="tel" required title="Mobile Phone Here"></label>
+                <label>Address <input type="text" name="address" autocomplete="street-address" title="Home Address Here"></label>
+                <label>City <input type="text" name="city" autocomplete="address-level2" title="City You Live In"></label>
+                <label> State
+                    <select name="state">
+                        <option value="No Selection Made">Please Select</option>
+                        <option value="Alabama">AL</option>
+                        <option value="Alaska">AK</option>
+                        <option value="Arizona">AZ</option>
+                        <option value="Arkansas">AR</option>
+                        <option value="America Samoa">AS</option>
+                        <option value="California">CA</option>
+                        <option value="Colorado">CO</option>
+                        <option value="Connecticut">CT</option>
+                        <option value="Delaware">DE</option>
+                        <option value="District of Columbia">DC</option>
+                        <option value="Florida">FL</option>
+                        <option value="Georgia">GA</option>
+                        <option value="Guam">GU</option>
+                        <option value="Hawaii">HI</option>
+                        <option value="Idaho">ID</option>
+                        <option value="Illinois">IL</option>
+                        <option value="Indiana">IN</option>
+                        <option value="Iowa">IA</option>
+                        <option value="Kansas">KS</option>
+                        <option value="Kentucky">KY</option>
+                        <option value="Louisiana">LA</option>
+                        <option value="Maine">ME</option>
+                        <option value="Maryland">MD</option>
+                        <option value="Massachusetts">MA</option>
+                        <option value="Michigan">MI</option>
+                        <option value="Minnesota">MN</option>
+                        <option value="Missippi">MS</option>
+                        <option value="Missouri">MO</option>
+                        <option value="Montana">MT</option>
+                        <option value="Nebraska">NE</option>
+                        <option value="Nevada">NV</option>
+                        <option value="New Hampshire">NH</option>
+                        <option value="New Jersey">NJ</option>
+                        <option value="New Mexico">NM</option>
+                        <option value="New York">NY</option>
+                        <option value="North Carolina">NC</option>
+                        <option value="North Dakota">ND</option>
+                        <option value="Northern Mariana Islands">MP</option>
+                        <option value="Ohio">OH</option>
+                        <option value="Oklahoma">OK</option>
+                        <option value="Oregon">OR</option>
+                        <option value="Pennsylvania">PA</option>
+                        <option value="Puerto Rico">PR</option>
+                        <option value="Rhode Island">RI</option>
+                        <option value="South Carolina">SC</option>
+                        <option value="South Dakota">SD</option>
+                        <option value="Tennessee">TN</option>
+                        <option value="Texas">TX</option>
+                        <option value="Utah">UT</option>
+                        <option value="Vermont">VT</option>
+                        <option value="Virginia">VA</option>
+                        <option value="Virgin Islands">VI</option>
+                        <option value="Washington">WA</option>
+                        <option value="West Virginia">WV</option>
+                        <option value="Wisconsin">WI</option>
+                        <option value="Wyoming">WY</option>
+                    </select>
+                </label>
+                <label>Zip Code <input type="text" name="zip code"   title="Enter Your Postal Code"></label>
+                
+                <h3>Communication Preferences</h3>
+                <label><input type="radio" name="communication" value="phone">Phone Calls</label>
+                <label><input type="radio" name="communication" value="text">Text Messages</label>
+                <label><input type="radio" name="communication" value="email">Emails</label>
+
+                <h3>Highest Education Completed</h3>
+                <label><input type="checkbox" name="GED">GED</label>
+                <label><input type="checkbox" name="High School Diploma">High School Diploma</label>
+                <label><input type="checkbox" name="Associates Degree">Associates Degree</label>
+                <label><input type="checkbox" name="Other">Other</label>
+
+                <h3>Previous School Information</h3> 
+                <select name="School Type">
+                    <option value="No Selection Made">Please Select</option>
+                    <option value="High School">High School</option>
+                    <option value="College">College</option>
+                    <option value="University">University</option>
+                    <option value="Other">Other</option>
+                 </select>
+                 <label><input type="date" name="date" value="date"></label>
+            </label>
+                
+
+                <h3>myArkham Account Information</h3>
+                <label>UserName (5-10 letters)<input type="text" required minlength="5" title="UserName that is 5-10 lower case or upper case letters only"></label>
+
+                <label>Password (at least 6 characters long)<input type="password" name="password" required minlength="6" required pattern="[A-Z-z0-9]{5,9}" title="At least 6 characters, letters, or numbers PLEASE!"></label>
+               <div id="privacy">
+                <p>By appling for admissions to Arkham <br>Univeristy you agree to the univeristies <br><a href="#">Vigilante Mission & Code of Conduct</a>.</p>
+                </div>
+                <input type="submit" value="APPLY">
+                
+
+            </form>
+        </main>
+    </div>
+
+    <div>
+        <footer id="footerWrapper">
+            <p>&copy; <span id="year">x</span> &bull; Arkham University &bull; Seth Elliott</p>
+        </footer>
+    </div>
+    
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

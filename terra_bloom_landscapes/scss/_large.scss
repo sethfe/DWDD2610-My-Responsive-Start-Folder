@@ -1,0 +1,25 @@
+header, nav, main, footer {
+    max-width: 75rem;
+    margin: auto;
+}
+
+// nav starts here
+nav ul li a {
+    font-size: .9rem;
+    padding: .5rem 1.2rem;
+} // end nav
+
+
+// Client Reviews Starts Here
+.reviews {
+    section {
+      grid-template-columns: 200px auto;
+      column-gap: 8px;
+    } // end section
+  } // end reviews 
+
+  // Our Services Starts Here
+  .our-services {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  } // end our-services

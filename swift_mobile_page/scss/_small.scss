@@ -1,0 +1,185 @@
+/* Prevent adjustments of font size after orientation changes.  */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    height: 100%;
+  }
+  /*---- apply a natural box layout model to all elements -------*/
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+// Body Starts Here
+  body {
+    height: 100%;
+    font-family: $defaultFont;
+    font-weight: $normalWeight;
+    color: $fontColor;
+    h1{
+    padding: 1rem $gutter;
+    }
+  } // end body
+
+// Header Starts Here
+/* #headerWrapper {
+   border-bottom: 1px solid $secondaryColor;
+   padding: 0.5rem $gutter;
+  }  */
+
+  header {
+    display: grid;
+    grid-template-columns: 51px auto;
+    align-items: right;
+    padding: .5rem 2vw;
+    border-bottom: 1px solid $secondaryColor;
+    padding: 0.5rem $gutter;
+    h1 {
+        font-size: 1.6rem;
+        font-family: $logoFont;
+        font-weight: $normalWeight;
+    }
+  } // end header
+
+ // nav starts here
+  nav {
+    padding: 40px;
+    button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: transparent;
+      border: none;
+      font-size: 1.5rem;
+      color: $secondaryColor;
+      padding: 1rem 2vw 1rem 1rem;
+    } // end button
+
+    ul  {
+      background-color: $menuColor;
+      position: absolute;
+      right: 0;
+      width: 100%;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: none;
+    } // end ul
+
+    ul.open {display: block; } // end ul.open
+
+    ul li {
+      border-bottom: 1px solid rgba(0,0,0,0.2);
+      a {
+        display: block;
+        padding: .9rem 2vw;
+        font-weight: $normalWeight;
+        color: white;
+        text-decoration: none;
+        text-align: right;
+      }
+    }
+
+
+    ul li.active a {background-color: darken($menuColor, 8%);}
+    ul li a:hover {background-color: darken($menuColor, 4%);}
+  } // end nav
+
+
+
+
+  #mainWrapper {
+    padding: 1rem $gutter;
+    h2 {
+      color: $secondaryColor;
+    }
+  }
+
+
+  main img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+section.deals {
+ h2, p {
+  color: white!important;
+}
+}
+
+
+
+//stlying the rows
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1rem 0;
+    padding: 0 8px;
+    //border: green solid 1px;
+}
+
+
+// styliing the columns
+.column {
+    padding: 8px 8px;
+    margin: 8px auto;
+    //border: purple dashed 1px;
+}
+
+
+// Create the For Loop
+@for $i from 1 through 12 {
+    $w: calc($i /12) *100%;
+    .small-#{$i} {flex-basis: $w;}
+}
+
+.line, .round, .fill, .shadow {padding: 0 8px;}
+
+.line{border: 1px #bbb solid;}
+
+.round{border-radius: 9px;}
+
+.fill{
+  background-color: black;
+  padding: 8px 8px;
+}
+
+.shadow {box-shadow: 0 0 10px #eee;}
+  
+
+// footer begins here
+#footerWrapper {
+    background-color: lighten($secondaryColor, 4%);
+}
+footer {
+    padding: 0.5rem $gutter;
+    p {
+        margin: 0;
+        font-weight: $lightWeight;
+        text-align: center;
+        color: white;
+    }
+     // Scoial Starts Here
+ section.social {
+  display: flex;
+  justify-content: center;
+
+  a {
+  color: white;
+  display: block;
+  font-size: 1rem;
+  margin: .5rem;
+  }
+  a:hover {
+  color: darken($primaryColor, 30%);
+  }
+} // end social
+} // end footer
+
+
+

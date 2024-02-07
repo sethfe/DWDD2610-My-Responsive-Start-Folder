@@ -1,0 +1,198 @@
+/* Prevent adjustments of font size after orientation changes.  */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    height: 100%;
+  }
+  /*---- apply a natural box layout model to all elements -------*/
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  body {
+    height: 100%;
+    display: grid;
+    font-family: $defaultFont;
+    font-weight: $normalWeight;
+    color: $fontColor;
+  }
+
+  // HEADER STARTS HERE
+  div#headerWrapper {
+    grid-row-start: 1;
+    box-shadow: 5px 5px 5px lighten($tertiaryColor, 20%);
+    
+  }
+  header {
+    display: grid;
+    grid-template-columns: 149px auto 100px;
+    align-items: center;
+    padding: .5rem 2vw;
+    div#phone{display: none;}
+    h1{
+      display: flex;
+        margin: 0;
+        font-family: $logoFont;
+        font-size: 2rem;
+        font-weight: $normalWeight;
+        padding-left: .5rem;
+        color: $primaryColor;
+        
+    }
+
+  
+    
+  } // end header
+
+ 
+
+// NAVIGATION STARTS HERE
+  div#navWrapper {
+    grid-row-start: 4;
+  }
+
+  div#hamburger a, div#closex a {
+    display: block;
+    padding: .8rem 2vw;
+    font-size: 1.5rem;
+    color: $primaryColor;
+    text-decoration: none;
+    text-align: right;
+  } // end buttons
+
+  div#closex a {
+    margin-right: 2vw;
+  }
+
+  nav {
+    height: 100vh;
+    ul {border: none;}
+    ul li {border: none}
+    ul li a {
+      display: block;
+      color: $primaryColor;
+      padding: .5rem 2vw;
+      text-decoration: none;
+      text-align: center;
+    } // end anchors
+    ul li a:hover {
+      
+      text-decoration: underline 3px $secondaryColor;
+    }
+    ul li.active a {
+      background-color: transparent;
+      text-decoration: underline 3px $secondaryColor;
+    }
+   
+    
+     
+
+  } // end nav
+
+   //MAIN STARTS HERE
+   div#mainWrapper {
+    grid-row-start: 2;
+    padding: 1rem $gutter;
+
+  }
+   main{
+  
+   h1 {
+         padding: .5rem $gutter; 
+         color: $secondaryColor;
+         font-weight: $semiBold;
+     }
+     
+     
+   
+   } // end main
+   div#personalInfo {
+    padding: .2rem $gutter;
+    border-bottom: 1px solid #eee;
+   }
+
+
+   div#privacy {
+    p {
+      font-weight: $lightWeight;
+      font-size: .8rem;
+    }
+    a {
+      color: $tertiaryColor2;
+      font-weight: $mediumWeight;
+    }
+   }
+ 
+ 
+   // MY FORM STARTS HERE
+   form.my-form {
+     margin: .5rem $gutter;
+   
+     label {
+       display: block;
+       font-size: .8rem;
+       color: darken($tertiaryColor, 15%);
+       padding-top: .2rem;
+     } // end label
+     h3{
+       font-size: .9rem;
+       color: $primaryColor;
+       margin: 1.5rem 0 .2rem 0;
+       border-bottom: 1px solid #eee;
+     }
+     input[type=text],
+     input[type=email],
+     input[type=tel],
+     input[type=number],
+     input[type=password],
+     input[type=date],
+     select {
+       display: block;
+       margin: .1rem 0 1rem 0;
+       border: 1px solid #999;
+       border-radius: 5px 5px 5px 5px;
+       border-right-width: 5px;
+       border-right-color: $primaryColor;
+       font-size: 1rem;
+       color: $fontColor;
+       width: 250px;
+       padding: .5rem $gutter;
+     }
+ 
+     input:required {border-right-color: red;}
+     input:focus {border-bottom-color: grey;}
+     input:required:valid {border-right-color: green;}
+ 
+     input[type=submit] {
+       border: none;
+       background-color:$primaryColor;
+       color: white;
+       border-radius: 20px;
+       padding: .75rem 1.5rem;
+       margin: 2rem 0;
+       width: 250px;
+       font-size: 1.2rem;
+       -webkit-appearance: none;
+       appearance: none;
+       &:hover {
+         background-color: darken($secondaryColor, 10%);
+       }
+     }
+   } // end form
+
+// footer begins here
+#footerWrapper {
+    background-color: $primaryColor;
+}
+footer {
+    padding: 1rem $gutter;
+    p {
+        margin: 0;
+        font-weight: $lightWeight;
+        text-align: center;
+        color: white;
+    }
+}

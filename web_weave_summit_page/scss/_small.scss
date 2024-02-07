@@ -1,0 +1,246 @@
+/* Prevent adjustments of font size after orientation changes.  */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    height: 100%;
+  }
+  /*---- apply a natural box layout model to all elements -------*/
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  body {
+    height: 100%;
+    font-family: $defaultFont;
+    font-weight: $normalWeight;
+    color: $fontColor;
+  }
+
+// HEADER BEGINS HERE
+  #headerWrapper {
+    background-color: white;
+    color: $secondaryColor;
+  }
+
+  header {
+    display: flex;
+    align-items: flex-end;
+    padding: 1rem $gutter;
+    gap: 8px;
+    h1 {
+        margin: 0;
+        padding-bottom: .3rem;
+        font-size: 2rem;
+        font-family: $logoFont;
+        font-weight: $normalWeight;
+        color: $primaryColor;
+    }
+    p {
+      margin: 0;
+      
+      font-family: $defaultFont;
+      font-size: 1rem;
+      font-weight: $normalWeight;
+      color: $primaryColor;
+
+    }
+  } // end header
+
+// NAVIGATION BEGINS HERE
+  #navWrapper {
+    background-color: $menuColor;
+  }
+
+  nav button {
+    position: relative;
+    height: 46px;
+    width: 46px;
+    background: none;
+    border: none;
+    .line {
+      position: absolute;
+      height: 2px;
+      width: 60%;
+      left: 20%;
+      background-color: white;
+      transition: all .3s ease;
+    } // end line
+    .top {top: 29%;}
+    .middle {top: 48%;}
+    .bottom {top: 67%;}
+  } // end nav 
+
+    #hamburgerBtn.open {
+      .top{
+        transform: rotate(45deg);
+        top: 48%;
+      }
+      .middle, .bottom {
+        transform: rotate(-45deg);
+        top: 48%;
+      }
+    } // end open
+
+ // NAVIGATION BEGINS HERE
+    nav {
+      ul {
+        display: none;
+        margin: 0;
+        padding: 0;
+      }
+      ul li.active a{background-color: rgba(0,0,0,0.25);}
+      ul li a {
+        display: block;
+        padding: .75rem $gutter;
+        font-size: 1.6rem;
+        color: white;
+        text-decoration: none;
+        border-top: 1px solid rgba(0,0,0,0.2);
+      }
+      ul li a:hover {
+        background-color: rgba(0,0,0,0.5);
+      }
+      // Toggle Nav bar to expand down
+      ul.open {display: block;}
+    } // end nav
+
+// HERO BEGINS HERE
+    .hero {
+      position: relative;
+      video {
+        width: 100%;
+        height: auto;
+      }
+    div{
+     position: absolute;
+     height: 50%;
+     top: 0px;
+     left: 0px;
+     right: 0px;
+     color: white;
+     background: linear-gradient(90deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.2) 40%);
+     h1 {
+      padding: 0;
+      padding-left: $gutter;
+      font-weight: $semiBold;
+      text-decoration: underline 2px solid $tertiaryColor;
+     }
+     p {
+      padding: 0;
+      padding-left: $gutter;
+      padding-bottom: 1rem;
+      font-weight: $mediumWeight;
+     }
+
+        a {
+          padding: .5rem $gutter;
+          margin: auto 1rem;
+          border-radius: 20px;
+          background-color: $secondaryColor;
+          color: $fontColor;
+          font-family: $defaultFont;
+          font-weight: $mediumWeight;
+          text-align: center;
+          text-decoration: none;
+          box-shadow: 0 0 2px $primaryColor;
+          &:hover {
+            background-color: lighten($primaryColor, 10%);
+            color: white;
+          }
+          i {
+            margin-left: 15px;
+          }
+        }
+      
+    }
+    
+  } // end hero
+
+  //MAIN BEGINS HERE
+  main {
+    h1, p{
+      padding: .75rem $gutter;
+    }
+  }
+
+ // Flips Cards Begin Here
+ .flip-card {
+  background: none;
+  width: 420px;
+  height: 340px;
+  perspective: 1000px; 
+}
+
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+
+.flip-card-front {
+  img {
+    border-radius: 20px;
+  }
+  background-color: transparent;
+  color: black;
+}
+
+
+.flip-card-back {
+  background-color: $primaryColor;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.allCards {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.9);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem $gutter;
+  gap: 1rem;
+}
+
+ 
+
+    
+  
+
+// footer begins here
+#footerWrapper {
+    background-color: $primaryColor;
+}
+footer {
+    padding: 0.5rem $gutter;
+    p {
+        margin: 0;
+        font-weight: $lightWeight;
+        text-align: center;
+        color: white;
+    }
+}
+

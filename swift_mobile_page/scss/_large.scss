@@ -1,0 +1,48 @@
+header, main, footer {
+    max-width: 75rem;
+    margin: auto;
+}
+
+// Header Starts Here
+header {
+    grid-template-columns: 51px auto auto;
+} // end header
+
+// Nav Starts Here
+nav {
+    button{display: none;}
+    justify-self: right;
+    ul, ul.open {
+        position: relative;
+        display: flex;
+        background-color: transparent;
+        width: auto;
+    } // end ul, ul.open
+
+    ul li {border: none}
+
+    ul li a {
+        color: $secondaryColor;
+        border-radius: 20px;
+        padding: .5rem 1rem;
+        margin-left: .2rem;
+        transition: all .5s ease;
+    } // end anchors
+
+    ul li a:hover {
+        background-color: $primaryColor;
+        color: white!important;
+    } // end anchors:hover
+
+    ul li.active a {
+        color: white;
+    }
+}
+
+
+
+// Create the For Loop
+@for $i from 1 through 12 {
+    $w: calc($i /12) *100%;
+    .large-#{$i} {flex-basis: $w;}
+}

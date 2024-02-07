@@ -1,0 +1,18 @@
+header {
+    padding: 1rem $gutter;
+    h1{
+        font-size: 2rem;
+    }
+}
+
+nav ul {
+    width: 250px;
+    
+}
+
+
+// Create the For Loop
+@for $i from 1 through 12 {
+    $w: calc($i /12) *100%;
+    .medium-#{$i} {flex-basis: $w;}
+}

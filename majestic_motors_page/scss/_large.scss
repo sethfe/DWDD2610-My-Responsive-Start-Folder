@@ -1,0 +1,22 @@
+header, nav, main, footer {
+    max-width: 75rem;
+    margin: auto;
+}
+
+/* Navigation Start */
+
+
+
+
+
+.allcards {
+   display: grid;
+    section {
+        flex-basis: calc(33.3333% - (($gutter*2)/4));
+    }
+}
+
+footer div {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}

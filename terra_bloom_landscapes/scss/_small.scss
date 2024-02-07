@@ -1,0 +1,138 @@
+/* Prevent adjustments of font size after orientation changes.  */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    height: 100%;
+  }
+  /*---- apply a natural box layout model to all elements -------*/
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  body {
+    height: 100%;
+    font-family: $defaultFont;
+    font-weight: $normalWeight;
+    color: $fontColor;
+  }
+
+
+
+  header {
+  padding: .75rem $gutter;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  #phone{display: none;}
+  }
+
+  /*
+  #navWrapper {
+    background-color: #eee;
+  }
+
+  nav {
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        li {flex: 1;}
+    }
+    li.active {background-color: $primaryColor;}
+    a {
+        display: block;
+        padding: 0.75rem;
+        color: #333333;
+        text-align: center;
+        text-decoration: none;
+        &:hover {color: black;}
+    }
+  }
+  */
+  h2 {
+    color: $fontColor;
+    font-size: 1.75rem;
+    font-weight: $mediumWeight;
+    padding: 1.75rem $gutter;
+    margin: 0;
+
+}
+
+  div.reviews {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    section {
+      padding: 7px;
+      img {
+        width: 100%;
+        height: auto;
+        clip-path: circle(50% at 50% 50%);
+        transition: transform 1s;
+        &:hover {transform: rotate(15deg);}
+      }
+    } // end section
+  } // end reviews 
+
+ 
+// Our Services Starts Here
+  .our-services {
+    display: grid;
+    gap: 8px;
+    padding: .75rem $gutter;
+   
+    section {
+      position: relative;
+      border: none;
+      border-radius: 10px;
+      overflow: hidden;
+   
+      h2{
+        background-color: $primaryColor;
+        font-size: 1.2rem;
+        font-weight: $normalWeight;
+        margin: 0;
+        padding: .5rem $gutter;
+        text-align: center;
+        color: white;
+      }
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      img:last-child {
+        position: absolute;
+        bottom: 0;
+      }
+    }
+  } // end our-services
+
+
+// Swiper Stuff Starts Here
+  .swiper, .swiper img {
+    width: 100%;
+    height: auto;
+    position: relative;
+  } // end swiper
+
+
+
+ 
+
+// footer begins here
+#footerWrapper {
+    background-color: $primaryColor;
+}
+footer {
+    padding: 0.5rem $gutter;
+    p {
+        margin: 0;
+        font-weight: $lightWeight;
+        text-align: center;
+        color: white;
+    }
+}

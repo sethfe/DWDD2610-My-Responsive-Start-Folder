@@ -1,0 +1,69 @@
+header {
+    padding: 2rem $gutter;
+    h1{
+        font-size: 2rem;
+    }
+}
+
+#navWrapper {
+    background-color: $primaryColor;
+}
+
+
+nav {
+    button{display: none;}
+    ul, ul.open {
+        border: none;
+        display: flex;
+        justify-content: left;
+        background-color: $primaryColor;
+        background: linear-gradient(90deg, rgba(40,56,72,0) 0%, rgba(40,56,72,.8) 50%, rgba(40,56,72,0) 100%);
+    } // end ul
+    ul li {
+        background: none;
+    }
+   li.active {
+        background: none;
+        padding-bottom: 2px;
+        text-decoration: underline 2px $secondaryColor;
+        }
+    
+    a {
+        background: none;
+        &:hover {
+            background: none;
+            text-decoration: underline solid 2px $secondaryColor;
+        }
+    }
+    } // end nav
+
+.allcards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $gutter;
+    
+    section {
+        flex-basis: calc(50% - ($gutter/2));
+    }
+}
+
+#cards {
+    padding: 0 $gutter;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(500px,1fr));
+   gap: $gutter;
+    text-align: center;
+    color: $secondaryColor;
+    h3 {
+      margin: 2rem $gutter 0 $gutter;
+      text-align: center;
+      color: $secondaryColor;
+      font-weight: $boldWeight;
+    }
+  }
+
+footer div {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+}
